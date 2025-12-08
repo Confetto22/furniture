@@ -50,7 +50,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  /* font-family: var(--font-marcellus), Arial, Helvetica, sans-serif; */
+}
+*{
+  font-family: --font-marcellus;
 }
 
 @keyframes accordion-down {
@@ -91,4 +94,7 @@ body {
 
 .hero-swiper .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+.cover{
+  @apply bg-black/70 w-full h-full
 }
