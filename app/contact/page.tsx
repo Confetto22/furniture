@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,27 +79,37 @@ const Contact = () => {
           {/* Contact Information Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {/* Email */}
-            <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
+            <Link
+              href={"mailto:info@jclservices.com"}
+              target="_blank"
+              className="bg-brand-dark-light border cursor-pointer border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors"
+            >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-7 h-7 text-brand-gold" />
               </div>
               <h3 className="text-brand-white font-semibold mb-2">Email Us</h3>
               <p className="text-brand-white/70 text-sm">
-                Contact us via email
+                info@jclservices.com
               </p>
-            </div>
+            </Link>
 
             {/* Phone */}
-            <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
+            <Link
+              href={"phone:233302244515"}
+              className="bg-brand-dark-light cursor-pointer border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors"
+            >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-7 h-7 text-brand-gold" />
               </div>
-              <h3 className="text-brand-white font-semibold mb-2">Call Us</h3>
-              <p className="text-brand-white/70 text-sm">Contact us by phone</p>
-            </div>
+              <h3 className="text-brand-white font-semibold mb-2">Call Us!</h3>
+              <p className="text-brand-white/70 text-sm">+233(0)302244515</p>
+            </Link>
 
             {/* Main Office Location */}
-            <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
+            <Link
+              href={"#"}
+              className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors"
+            >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-7 h-7 text-brand-gold" />
               </div>
@@ -109,10 +120,16 @@ const Contact = () => {
                 Kokomlemle, just before the Circle overpass connecting
                 Kokomlemle to Adabraka
               </p>
-            </div>
+            </Link>
 
             {/* Branch Office Location */}
-            <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
+            <Link
+              href={
+                "https://www.google.com/maps/place/Swanzy+Shopping+Arcade/@5.5530766,-0.2137793,17z/data=!3m1!4b1!4m6!3m5!1s0xfdf90a4ec8dfd13:0x5127d75ee6bfdff4!8m2!3d5.5530713!4d-0.211199!16s%2Fg%2F1hd_h54pr?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+              }
+              target="_blank"
+              className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors"
+            >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-7 h-7 text-brand-gold" />
               </div>
@@ -122,7 +139,7 @@ const Contact = () => {
               <p className="text-brand-white/70 text-sm leading-relaxed">
                 Swanzy Shopping Arcade near Cocoa House, Accra Central
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* Contact Form */}

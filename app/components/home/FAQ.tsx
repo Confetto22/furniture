@@ -65,7 +65,7 @@ export default function FAQ() {
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 flex-row-reverse gap-8 lg:gap-12">
           {/* Left Panel - FAQ Section */}
           <div className="space-y-6">
             {/* Header */}
@@ -108,11 +108,11 @@ export default function FAQ() {
           </div>
 
           {/* Right Panel - Visual Section */}
-          <div className="relative">
+          <div className="relative order-first">
             {/* Main Image */}
-            <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full h-full max-h-[600px] rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=80"
+                src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765235690/jcl-furniture/pexels-fotios-photos-1957477_1_wjqnhw.jpg"
                 alt="Modern bedroom"
                 fill
                 className="object-cover"

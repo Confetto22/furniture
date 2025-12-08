@@ -45,7 +45,8 @@ export default function Footer() {
             {/* Social Media Icons */}
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/jclservices.gh/?igsh=MWpmZjE4ZTVnYjFr#"
+                target="_blank"
                 className="text-brand-white/70 hover:text-brand-gold transition-colors"
                 aria-label="Instagram"
               >
