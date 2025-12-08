@@ -20,7 +20,7 @@ export default function Header() {
             {/* Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">
               <a
-                href="#"
+                href="/"
                 className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium"
               >
                 Home
