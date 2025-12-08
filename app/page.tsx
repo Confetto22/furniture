@@ -59,9 +59,11 @@ export default function Home() {
               {/* Bottom Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
+                  src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230725/jcl-furniture/still-life-office-chair-indoors_ydr8gm.jpg"
                   alt="Modern living and dining area"
                   fill
+                  priority
+                  loading="eager"
                   className="object-cover"
                 />
               </div>
@@ -72,7 +74,9 @@ export default function Home() {
               {/* Top Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80"
+                  src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230717/jcl-furniture/3d-rendering-business-meeting-working-room-office-building_qyd4z2.jpg"
+                  priority
+                  loading="eager"
                   alt="Cozy modern living room"
                   fill
                   className="object-cover"

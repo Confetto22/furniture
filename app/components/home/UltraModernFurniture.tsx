@@ -142,7 +142,7 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
-      className="w-full rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-shadow"
+      className="w-full rounded-lg h-full overflow-hidden bg-brand-white border border-brand-dark-light group cursor-pointer transition-shadow"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -150,7 +150,7 @@ function ProductCard({ product }: { product: Product }) {
       <div className="relative h-[300px] md:h-[350px] overflow-hidden">
         {/* Default Image */}
         <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
+          className={` inset-0 transition-opacity duration-500 ${
             isHovered ? "opacity-0" : "opacity-100"
           }`}
         >
@@ -163,7 +163,7 @@ function ProductCard({ product }: { product: Product }) {
         </div>
         {/* Hover Image */}
         <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
+          className={`inset-0 transition-opacity duration-500 ${
             isHovered ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -182,7 +182,7 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Product Info */}
-      <div className="p-6 flex flex-col items-center justify-center text-center bg-brand-white">
+      <div className="p-6 flex flex-col items-center h-fit overflow-hidden justify-center text-center">
         <p className="text-brand-gold text-[.7rem] uppercase tracking-wider mb-2 font-semibold">
           {product.category}
         </p>

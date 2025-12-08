@@ -12,10 +12,10 @@ interface CategoryCard {
 
 const categories: CategoryCard[] = [
   {
-    name: "Living Room",
+    name: "Office",
     priceRange: "$22.99",
     image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230718/jcl-furniture/mid-century-interior-design_oyoqwn.jpg",
     isLarge: true,
   },
   {
@@ -25,10 +25,10 @@ const categories: CategoryCard[] = [
       "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80",
   },
   {
-    name: "Dinning",
-    priceRange: "$50.99",
+    name: "Living Room",
+    priceRange: "$22.99",
     image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80",
   },
   {
     name: "Study Room",
