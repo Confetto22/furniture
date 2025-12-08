@@ -16,7 +16,7 @@ const stats: StatItem[] = [
 
 export default function AboutStats() {
   return (
-    <section className="relative w-full border border-brand-gold overflow-hidden">
+    <section className="relative w-full border border-brand-white/30 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,7 +37,7 @@ export default function AboutStats() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="flex py-12  flex-col items-center justify-center  px-4 border-r border-white/30 last:border-r-0"
+              className="flex py-12  flex-col items-center justify-center  px-4 border-r border-brand-white/10 last:border-r-0"
             >
               {/* Number Value */}
               <div

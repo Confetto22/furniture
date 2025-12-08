@@ -110,13 +110,13 @@ export default function CustomizedFurniture() {
               </button>
 
               {/* Screenshot Button - Bottom Left */}
-              <button
+              {/* <button
                 className="absolute bottom-4 left-4 px-4 py-2 bg-black/60 hover:bg-black/80 rounded backdrop-blur-sm text-white text-sm transition-colors z-10"
                 aria-label="Screenshot"
               >
                 <Camera className="w-4 h-4 inline-block mr-2" />
                 Screenshot
-              </button>
+              </button> */}
             </div>
           </div>
 
