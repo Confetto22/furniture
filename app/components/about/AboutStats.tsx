@@ -29,7 +29,7 @@ export default function AboutStats() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 z-10 bg-black/70"></div>
+      <div className="absolute inset-0 z-10 bg-brand-dark/80"></div>
 
       {/* Content */}
       <div className="relative z-20  container mx-auto px-4">
@@ -41,14 +41,14 @@ export default function AboutStats() {
             >
               {/* Number Value */}
               <div
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white mb-3"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 {stat.value}
               </div>
 
               {/* Description */}
-              <div className="text-sm md:text-base text-white/90 text-center font-light tracking-wide">
+              <div className="text-sm md:text-base text-brand-white/90 text-center font-light tracking-wide">
                 {stat.label}
               </div>
             </div>

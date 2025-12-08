@@ -37,15 +37,15 @@ const teamMembers: TeamMember[] = [
 
 export default function SpecialTeam() {
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
+    <section className="bg-brand-dark-light py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="text-orange-500 text-sm font-semibold uppercase tracking-wider mb-3">
+          <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
             COMFORT CRAFTERS
           </div>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Special Team
@@ -57,7 +57,7 @@ export default function SpecialTeam() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="  overflow-hidden hover:border-white/40 transition-colors"
+              className="bg-brand-dark rounded-lg overflow-hidden hover:border-brand-gold/40 transition-all border border-brand-white/10 shadow-md hover:shadow-lg"
             >
               {/* Member Image */}
               <div className="relative w-full aspect-square overflow-hidden">
@@ -65,16 +65,16 @@ export default function SpecialTeam() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
               {/* Member Info */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
+              <div className="p-6 text-center bg-brand-dark">
+                <h3 className="text-xl md:text-2xl font-semibold text-brand-white mb-2">
                   {member.name}
                 </h3>
-                <p className="text-white/70 text-sm md:text-base">
+                <p className="text-brand-white/70 text-sm md:text-base">
                   {member.title}
                 </p>
               </div>

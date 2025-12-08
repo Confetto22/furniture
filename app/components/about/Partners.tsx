@@ -42,13 +42,13 @@ export default function Partners() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-gray-900 py-16 w-full md:py-24">
+    <section className="bg-brand-dark py-16 w-full md:py-24">
       <div className=" w-full ">
         <div className="grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-5 gap-0">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="relative py-12 overflow-hidden border-r border-white/10 last:border-r-0 group cursor-pointer"
+              className="relative py-12 overflow-hidden border-r border-brand-white/10 last:border-r-0 group cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -67,12 +67,12 @@ export default function Partners() {
                   className="object-cover transition-transform duration-500"
                 />
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/70"></div>
+                <div className="absolute inset-0 bg-brand-dark/80"></div>
               </div>
 
-              {/* Default Dark Grey Background */}
+              {/* Default Dark Background */}
               <div
-                className={`absolute inset-0 bg-gray-800 transition-opacity duration-500 ease-in-out ${
+                className={`absolute inset-0 bg-brand-dark-light transition-opacity duration-500 ease-in-out ${
                   hoveredIndex === index ? "opacity-0" : "opacity-100"
                 }`}
               ></div>
@@ -80,7 +80,7 @@ export default function Partners() {
               {/* Brand Name Content */}
               <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 text-center transition-transform duration-300 group-hover:scale-105">
                 {partner.name === "Brown Donkey" ? (
-                  <div className="text-white">
+                  <div className="text-brand-white">
                     <div
                       className="text-2xl md:text-3xl font-bold mb-1"
                       style={{ fontFamily: "var(--font-playfair)" }}
@@ -95,30 +95,30 @@ export default function Partners() {
                     </div>
                   </div>
                 ) : partner.name === "Maskan" ? (
-                  <div className="text-white">
+                  <div className="text-brand-white">
                     <div
                       className="text-3xl md:text-4xl font-bold relative inline-block"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {partner.name}
-                      <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-white transform -skew-x-12"></span>
+                      <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-gold transform -skew-x-12"></span>
                     </div>
                   </div>
                 ) : partner.name === "Amishar" ? (
-                  <div className="text-white">
+                  <div className="text-brand-white">
                     <div
                       className="text-3xl md:text-4xl font-bold mb-1"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {partner.name}
                     </div>
-                    <div className="text-xs md:text-sm uppercase tracking-widest text-white/80">
+                    <div className="text-xs md:text-sm uppercase tracking-widest text-brand-white/80">
                       {partner.subtitle}
                     </div>
                   </div>
                 ) : (
                   <div
-                    className="text-white text-3xl md:text-4xl font-bold"
+                    className="text-brand-white text-3xl md:text-4xl font-bold"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {partner.name}

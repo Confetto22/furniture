@@ -40,20 +40,23 @@ const categories: CategoryCard[] = [
 
 export default function ArtOfCoziness() {
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
+    <section className="bg-brand-dark-light py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 md:mb-16 gap-6">
           <div className="text-center sm:text-left">
-            <div className="text-gray-400 text-sm uppercase tracking-wider mb-2">
+            <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-2">
               UNLOCKING THE SECRET
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            <h2
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Art Of Coziness
             </h2>
           </div>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0">
-            <span className="font-semibold">Discover More</span>
+          <button className="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0 font-semibold">
+            <span>Discover More</span>
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
@@ -140,7 +143,7 @@ function CategoryCard({
       {/* Text Overlay - Bottom Left Corner */}
       <div className="absolute cover bottom-0 left-0 p-6 md:p-8 z-10">
         <h3
-          className={`font-bold text-white mb-1 ${
+          className={`font-bold text-brand-white mb-1 ${
             isLarge
               ? "text-3xl md:text-4xl lg:text-5xl"
               : "text-2xl md:text-3xl"
@@ -148,8 +151,8 @@ function CategoryCard({
         >
           {name}
         </h3>
-        <p className="text-gray-300 text-sm md:text-base">
-          (Range from {priceRange})
+        <p className="text-brand-white/80 text-sm md:text-base">
+          Starting from {priceRange}
         </p>
       </div>
     </div>

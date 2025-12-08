@@ -26,21 +26,24 @@ export default function Newsletter() {
           priority
         />
         {/* Warm lighting gradient from top-center */}
-        <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/30 via-transparent to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-gold/20 via-transparent to-brand-dark/90"></div>
         {/* Additional dark overlay for better contrast */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-brand-dark/70"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           {/* Subheading */}
-          <div className="text-orange-500 text-sm font-semibold uppercase tracking-wider mb-4">
+          <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4">
             ART OF COMFORT
           </div>
 
           {/* Main Title */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-12 leading-tight">
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white mb-12 leading-tight"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
             Transforming Spaces,
             <br />
             Transforming Style
@@ -56,17 +59,17 @@ export default function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your mail id here"
-                className="flex-1 max-w-md w-full px-6 py-4 bg-gray-800/90 border-2 border-orange-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                className="flex-1 max-w-md w-full px-6 py-4 bg-brand-dark/90 border-2 border-brand-gold rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all"
                 required
               />
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-14 h-14 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg shrink-0"
+                className="w-14 h-14 bg-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold/90 transition-colors shadow-lg shrink-0"
                 aria-label="Submit email"
               >
-                <ArrowRight className="w-6 h-6 text-black" />
+                <ArrowRight className="w-6 h-6 text-brand-dark" />
               </button>
             </div>
 
@@ -77,16 +80,16 @@ export default function Newsletter() {
                 id="privacy-agree"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-1 w-4 h-4 border-gray-400 rounded focus:ring-orange-500 text-orange-500"
+                className="mt-1 w-4 h-4 border-brand-white/40 rounded focus:ring-brand-gold text-brand-gold accent-brand-gold"
               />
               <label
                 htmlFor="privacy-agree"
-                className="text-gray-300 text-sm md:text-base cursor-pointer"
+                className="text-brand-white/80 text-sm md:text-base cursor-pointer"
               >
                 Your email is safe with us, we dont spam.{" "}
                 <a
                   href="#"
-                  className="text-orange-500 hover:text-orange-400 underline transition-colors"
+                  className="text-brand-gold hover:text-brand-gold/80 underline transition-colors"
                 >
                   Privacy Policy
                 </a>
