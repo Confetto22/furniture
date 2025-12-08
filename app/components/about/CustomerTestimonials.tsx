@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Rossana Isabella",
     location: "China",
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    text: "The quality of furniture I received exceeded my expectations. The craftsmanship is exceptional, and the pieces have transformed my living space into a beautiful, comfortable home. The customer service was outstanding throughout the entire process.",
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
     rating: 4.5,
@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Sarah Johnson",
     location: "United States",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    text: "I've been working with JCL Services for over two years now, and I'm consistently impressed by their collection. The furniture is not only stylish but also incredibly durable. Their attention to detail and commitment to quality makes them my go-to furniture provider.",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
     rating: 5,
@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Michael Chen",
     location: "Singapore",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    text: "The delivery was prompt and professional, and the furniture arrived in perfect condition. The design perfectly matches my modern aesthetic, and I've received countless compliments from guests. Highly recommend JCL Services for anyone looking for premium furniture.",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
     rating: 4.5,
@@ -53,24 +53,24 @@ function StarRating({ rating }: { rating: number }) {
       {[...Array(fullStars)].map((_, i) => (
         <Star
           key={`full-${i}`}
-          className="w-5 h-5 fill-orange-500 text-orange-500"
+          className="w-5 h-5 fill-brand-gold text-brand-gold"
         />
       ))}
       {hasHalfStar && (
         <div className="relative w-5 h-5 flex-shrink-0">
           {/* Empty star background */}
-          <Star className="w-5 h-5 text-gray-400 absolute inset-0" />
+          <Star className="w-5 h-5 text-brand-white/30 absolute inset-0" />
           {/* Half-filled star overlay */}
           <div
             className="absolute inset-0 overflow-hidden"
             style={{ width: "50%" }}
           >
-            <Star className="w-5 h-5 fill-orange-500 text-orange-500 absolute inset-0" />
+            <Star className="w-5 h-5 fill-brand-gold text-brand-gold absolute inset-0" />
           </div>
         </div>
       )}
       {[...Array(emptyStars)].map((_, i) => (
-        <Star key={`empty-${i}`} className="w-5 h-5 text-gray-400" />
+        <Star key={`empty-${i}`} className="w-5 h-5 text-brand-white/30" />
       ))}
     </div>
   );
@@ -78,15 +78,15 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function CustomerTestimonials() {
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
+    <section className="bg-brand-dark py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="text-orange-500 text-sm font-semibold uppercase tracking-wider mb-3">
+          <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
             CUSTOMER NOTES
           </div>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white mb-8"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Words From Our Customers
@@ -115,13 +115,13 @@ export default function CustomerTestimonials() {
                   </div>
 
                   {/* Testimonial Text */}
-                  <p className="text-white text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+                  <p className="text-brand-white text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
                     {testimonial.text}
                   </p>
 
                   {/* Customer Info */}
                   <div className="flex flex-col items-center">
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4 ring-2 ring-white/20">
+                    <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4 ring-2 ring-brand-gold/30">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -129,10 +129,10 @@ export default function CustomerTestimonials() {
                         className="object-cover"
                       />
                     </div>
-                    <h3 className="text-white text-xl md:text-2xl font-semibold mb-1">
+                    <h3 className="text-brand-white text-xl md:text-2xl font-semibold mb-1">
                       {testimonial.name}
                     </h3>
-                    <p className="text-white/70 text-sm md:text-base">
+                    <p className="text-brand-white/70 text-sm md:text-base">
                       {testimonial.location}
                     </p>
                   </div>
@@ -143,7 +143,7 @@ export default function CustomerTestimonials() {
 
           {/* Custom Navigation Buttons */}
           <button
-            className="customer-testimonials-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-white hover:text-orange-500 transition-colors"
+            className="customer-testimonials-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-brand-white hover:text-brand-gold transition-colors"
             aria-label="Previous testimonial"
           >
             <svg
@@ -161,7 +161,7 @@ export default function CustomerTestimonials() {
             </svg>
           </button>
           <button
-            className="customer-testimonials-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-white hover:text-orange-500 transition-colors"
+            className="customer-testimonials-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-brand-white hover:text-brand-gold transition-colors"
             aria-label="Next testimonial"
           >
             <svg

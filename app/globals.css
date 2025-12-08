@@ -1,29 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --card: #ffffff;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --primary: #8b6f47;
-  --primary-foreground: #ffffff;
-  --secondary: #f5f1eb;
-  --secondary-foreground: #1a1a1a;
+  /* Brand Colors */
+  --brand-dark: #1d3142;
+  --brand-dark-light: #2a4158;
+  --brand-gold: #e2bc7f;
+  --brand-white: #ffffff;
+  --brand-black: #000000;
+
+  /* Theme Colors */
+  --background: var(--brand-white);
+  --foreground: var(--brand-black);
+  --card: var(--brand-white);
+  --card-foreground: var(--brand-black);
+  --popover: var(--brand-white);
+  --popover-foreground: var(--brand-black);
+  --primary: var(--brand-gold);
+  --primary-foreground: var(--brand-black);
+  --secondary: var(--brand-dark);
+  --secondary-foreground: var(--brand-white);
   --muted: #f5f1eb;
   --muted-foreground: #6b6b6b;
-  --accent: #d4c4b0;
-  --accent-foreground: #1a1a1a;
+  --accent: var(--brand-gold);
+  --accent-foreground: var(--brand-black);
   --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
+  --destructive-foreground: var(--brand-white);
   --border: #e5e5e5;
   --input: #e5e5e5;
-  --ring: #8b6f47;
+  --ring: var(--brand-gold);
   --radius: 0.5rem;
 }
 
 @theme inline {
+  /* Brand Colors */
+  --color-brand-dark: #1d3142;
+  --color-brand-dark-light: #2a4158;
+  --color-brand-gold: #e2bc7f;
+  --color-brand-white: #ffffff;
+  --color-brand-black: #000000;
+
+  /* Theme Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -53,9 +69,20 @@ body {
   /* font-family: var(--font-marcellus), Arial, Helvetica, sans-serif; */
 }
 
-* {
-  font-family: --font-marcellus;
-}
+/* Brand Color Palette:
+   --brand-dark: #1d3142 (Dark Navy Blue)
+   --brand-dark-light: #2a4158 (Lighter Navy Blue - for alternating sections)
+   --brand-gold: #e2bc7f (Gold/Beige)
+   --brand-white: #ffffff (White)
+   --brand-black: #000000 (Black)
+   
+   Usage in Tailwind:
+   - bg-brand-dark, text-brand-dark, border-brand-dark
+   - bg-brand-dark-light, text-brand-dark-light, border-brand-dark-light
+   - bg-brand-gold, text-brand-gold, border-brand-gold
+   - bg-brand-white, text-brand-white, border-brand-white
+   - bg-brand-black, text-brand-black, border-brand-black
+*/
 
 @keyframes accordion-down {
   from {
@@ -98,20 +125,6 @@ body {
 .hero-swiper .swiper-pagination-bullet-active {
   background: var(--primary);
 }
-
-.cover {
+.cover{
   @apply bg-black/70 w-full h-full
-}
-
-.contact_form input, .contact_form textarea {
-  border: 1px solid #6e6e6e93;
-  padding: .7rem 1rem;
-  min-height: 3rem;
-  border-radius: 4rem;
-  color: white;
-}
-
-.contact_form textarea {
-  min-height: 16rem;
-  border-radius: 1rem;
 }

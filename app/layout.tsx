@@ -30,9 +30,9 @@ const marcellus = Marcellus({
 });
 
 export const metadata: Metadata = {
-  title: "TeaPoy Site - Exceptional Furniture's For Indoor & Outdoor",
+  title: "JCL Services - Exceptional Furniture's For Indoor & Outdoor",
   description:
-    "Discover timeless elegance and innovative furniture solutions for your home. Shop our luxurious collection of indoor and outdoor furniture.",
+    "Discover timeless elegance and innovative furniture solutions for your home. Explore our luxurious collection of indoor and outdoor furniture.",
 };
 
 export default function RootLayout({

@@ -41,8 +41,8 @@ const products: Product[] = [
   {
     name: "Modern Ceramic Lamp",
     category: "HOME DECORATION",
-    price: "₹ 51.70",
-    priceRange: "₹ 58.50",
+    price: "$ 51.70",
+    priceRange: "$ 58.50",
     image:
       "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
     hoverImage:
@@ -51,8 +51,8 @@ const products: Product[] = [
   {
     name: "Soft Seater Chair",
     category: "HOME DECORATION",
-    price: "₹ 108.95",
-    priceRange: "₹ 123.50",
+    price: "$ 108.95",
+    priceRange: "$ 123.50",
     image:
       "https://images.unsplash.com/photo-1549497538-303791108f95?w=800&q=80",
     hoverImage:
@@ -61,8 +61,8 @@ const products: Product[] = [
   {
     name: "Elegant Wooden Table",
     category: "HOME DECORATION, OUTDOOR DECORATION",
-    price: "₹ 88.20",
-    priceRange: "₹ 146.40",
+    price: "$ 88.20",
+    priceRange: "$ 146.40",
     image:
       "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=800&q=80",
     hoverImage:
@@ -71,8 +71,8 @@ const products: Product[] = [
   {
     name: "Round Wood Table",
     category: "HOME DECORATION",
-    price: "₹ 119.10",
-    priceRange: "₹ 123.75",
+    price: "$ 119.10",
+    priceRange: "$ 123.75",
     image:
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
     hoverImage:
@@ -84,14 +84,17 @@ export default function UltraModernFurniture() {
   const [activeCategory, setActiveCategory] = useState<string>("home");
 
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
+    <section className="bg-brand-dark py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="text-gray-400 text-sm uppercase tracking-wider mb-3">
+          <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
             FASHION-FORWARD
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
             Ultra-Modern Furniture&apos;s
           </h2>
         </div>
@@ -106,13 +109,13 @@ export default function UltraModernFurniture() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-full flex items-center gap-3 transition-all ${
                   isActive
-                    ? "bg-orange-500 text-white shadow-lg"
-                    : "bg-gray-800 border border-white/20 text-white hover:border-white/40"
+                    ? "bg-brand-gold text-brand-dark shadow-lg"
+                    : "bg-brand-dark border border-brand-white/20 text-brand-white hover:border-brand-gold/40"
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                    isActive ? "bg-white/20" : "bg-gray-700"
+                    isActive ? "bg-brand-dark/20" : "bg-brand-white/10"
                   }`}
                 >
                   {category.icon}
@@ -139,7 +142,7 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
-      className="w-full rounded-lg overflow-hidden group cursor-pointer"
+      className="w-full rounded-lg overflow-hidden group cursor-pointer shadow-md hover:shadow-lg transition-shadow"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -173,18 +176,20 @@ function ProductCard({ product }: { product: Product }) {
         </div>
 
         {/* ON SALE Badge */}
-        <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 text-xs font-semibold rounded">
+        <div className="absolute top-4 right-4 bg-brand-gold text-brand-dark px-3 py-1 text-xs font-semibold rounded">
           ON SALE
         </div>
       </div>
 
       {/* Product Info */}
-      <div className="p-6 flex flex-col items-center justify-center text-center">
-        <p className="text-gray-400 text-[.7rem] uppercase tracking-wider mb-2">
+      <div className="p-6 flex flex-col items-center justify-center text-center bg-brand-white">
+        <p className="text-brand-gold text-[.7rem] uppercase tracking-wider mb-2 font-semibold">
           {product.category}
         </p>
-        <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
-        <p className="text-gray-400 text-base">
+        <h3 className="text-xl font-bold text-brand-dark mb-3">
+          {product.name}
+        </h3>
+        <p className="text-brand-dark/70 text-base">
           {product.price} - {product.priceRange}
         </p>
       </div>

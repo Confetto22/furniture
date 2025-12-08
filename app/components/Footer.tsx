@@ -18,61 +18,56 @@ const scrollToTop = () => {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-brand-dark text-brand-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Brand Column */}
-          <div className="lg:col-span-1">
+          <div>
             {/* Logo */}
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center">
-                <span className="text-white text-xl">☕</span>
+              <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center">
+                <span className="text-brand-dark text-xl font-bold">J</span>
               </div>
-              <span className="text-2xl font-bold">Teapoy</span>
+              <span className="text-2xl font-bold text-brand-white">
+                JCL Services
+              </span>
             </div>
 
             {/* Description */}
-            <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Proin a interdum elit. Etiam eu sapien sem. Suspendisse a massa
-              justo. Cras eget lorem nunc. Fusce nec urna tempus tempus
+            <p className="text-brand-white/70 text-sm leading-relaxed mb-6">
+              We are dedicated to providing exceptional furniture solutions that
+              combine timeless elegance with modern functionality. Our carefully
+              curated collections transform spaces into beautiful, comfortable
+              environments that reflect your unique style and personality.
             </p>
 
             {/* Social Media Icons */}
             <div className="flex items-center gap-4">
               <a
                 href="#"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="text-white/70 hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <div className="w-5 h-5 rounded-full border border-white/70 flex items-center justify-center text-xs">
-                  O
-                </div>
-              </a>
-              <a
-                href="#"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
@@ -80,97 +75,36 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Useful Links Column */}
+          {/* Quick Links Column */}
           <div>
-            <h4 className="text-white font-bold mb-4">Useful Links</h4>
-            <ul className="space-y-2 text-sm text-white/70">
+            <h4 className="text-brand-white font-bold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-brand-white/70">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  History
+                <a href="/" className="hover:text-brand-gold transition-colors">
+                  Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Our Team
+                <a
+                  href="/about"
+                  className="hover:text-brand-gold transition-colors"
+                >
+                  About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Privacy Policy
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Collection
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Services Offered
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Product Catalog
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Information Column */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Information</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  FAQ/Return
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Privacy/Terms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Affiliate
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Sizing Guide
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Accessibility
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support Column */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Your Account
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Press Release
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Return Centre
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  App Download
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Advertisements
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -178,7 +112,9 @@ export default function Footer() {
 
           {/* Instagram Feed Column */}
           <div>
-            <h4 className="text-white font-bold mb-4">Follow @Instagram</h4>
+            <h4 className="text-brand-white font-bold mb-4">
+              Follow @Instagram
+            </h4>
             <div className="grid grid-cols-3 gap-2">
               {instagramImages.map((image, index) => (
                 <div
@@ -198,49 +134,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-6">
+        <div className="border-t border-brand-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
-            <p className="text-white/70 text-sm">
-              ©TeaPoy site all rights Reserved
+            <p className="text-brand-white/70 text-sm">
+              ©JCL Services all rights Reserved
             </p>
-
-            {/* Payment Methods */}
-            <div className="flex items-center gap-3 flex-wrap justify-center">
-              {/* Mastercard */}
-              <div className="w-10 h-6 bg-white rounded flex items-center justify-center text-xs font-bold text-gray-800">
-                MC
-              </div>
-              {/* Visa */}
-              <div className="w-10 h-6 bg-blue-600 rounded flex items-center justify-center text-xs font-bold text-white">
-                VISA
-              </div>
-              {/* AMEX */}
-              <div className="w-10 h-6 bg-blue-500 rounded flex items-center justify-center text-xs font-bold text-white">
-                AMEX
-              </div>
-              {/* Apple Pay */}
-              <div className="w-10 h-6 bg-black rounded flex items-center justify-center">
-                <span className="text-white text-xs">🍎</span>
-              </div>
-              {/* Skrill */}
-              <div className="w-10 h-6 bg-orange-500 rounded flex items-center justify-center text-xs font-bold text-white">
-                S
-              </div>
-              {/* PayPal */}
-              <div className="w-10 h-6 bg-blue-400 rounded flex items-center justify-center text-xs font-bold text-white">
-                PP
-              </div>
-            </div>
 
             {/* Scroll to Top Button */}
             <button
               onClick={scrollToTop}
-              className="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors relative group"
+              className="w-14 h-14 bg-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold/90 transition-colors relative group"
               aria-label="Scroll to top"
             >
-              <ArrowUp className="w-5 h-5 text-white z-10" />
-              <span className="text-white text-[9px] font-semibold absolute left-1 top-1/2 -translate-y-1/2 rotate-[-90deg] origin-center">
+              <ArrowUp className="w-5 h-5 text-brand-dark z-10" />
+              <span className="text-brand-dark text-[9px] font-semibold absolute left-1 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
                 TOP
               </span>
             </button>

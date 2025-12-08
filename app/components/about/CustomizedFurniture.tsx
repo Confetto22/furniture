@@ -71,14 +71,17 @@ export default function CustomizedFurniture() {
   const activeRoomData = roomCategories.find((room) => room.id === activeRoom);
 
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
+    <section className="bg-brand-dark-light py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="text-orange-500 text-sm font-semibold uppercase tracking-wider mb-3">
+          <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
             DIVERSE RANGE
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
             Customized Furniture&apos;s
           </h2>
         </div>
@@ -86,7 +89,7 @@ export default function CustomizedFurniture() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column - Furniture Viewer */}
-          <div className="relative w-full rounded-lg overflow-hidden border border-white/20">
+          <div className="relative w-full rounded-lg overflow-hidden border border-brand-white/20 shadow-lg">
             {/* Background Image */}
             <Image
               src={activeRoomData?.image || roomCategories[0].image}
@@ -127,8 +130,8 @@ export default function CustomizedFurniture() {
                   onClick={() => setActiveRoom(room.id)}
                   className={`flex flex-col items-center justify-center p-6 rounded-lg border transition-all ${
                     isActive
-                      ? "bg-orange-500 border-orange-500 text-white"
-                      : "bg-gray-800 border-white/20 text-white hover:border-white/40"
+                      ? "bg-brand-gold border-brand-gold text-brand-dark shadow-lg"
+                      : "bg-brand-dark border-brand-white/20 text-brand-white hover:border-brand-gold/40 hover:bg-brand-dark/80"
                   }`}
                 >
                   <div className="mb-3">{room.icon}</div>

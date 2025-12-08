@@ -36,24 +36,36 @@ import "swiper/css/pagination";
 
 export default function Hero() {
   return (
-    <section className=" w-full md:bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208580/jcl-furniture/Home-2-banner-img-02_qklaad.webp')] bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208098/jcl-furniture/Home-2-banner-img-03_hqjhu4.webp')] bg-cover bg-center overflow-hidden">
-      <div className="content bg-black/30 min-h-screen  flex items-center">
-        <div className="max-w-4xl px-8  text-center text-white  w-full flex flex-col items-start justify-start text-left">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            Timeless Elegance
-          </h2>
-          <h3 className="text-3xl md:text-4xl font-semibold mb-6 drop-shadow-md">
-            Discover Furniture's For Living
-          </h3>
-          <p className="text-lg text-white/90 max-w-2xl mb-8 drop-shadow">
-            Consectetur a erat nam at. Facilisis magna etiam tempor orci. Sem et
-            tortor consequat id. Fermentum egestas tellus. Nunc eu hendrerit
-            turpis. Fusce non lectus sem. In pellentesque nunc non Donec pretium
-            gravida neque et placerat.
-          </p>
-          <button className="bg-white text-primary px-8 py-3 rounded hover:bg-white/90 transition-colors font-semibold shadow-lg">
-            Shop Now
-          </button>
+    <section className="w-full md:bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208580/jcl-furniture/Home-2-banner-img-02_qklaad.webp')] bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208098/jcl-furniture/Home-2-banner-img-03_hqjhu4.webp')] bg-cover bg-center overflow-hidden">
+      <div className="content bg-brand-dark/60 min-h-screen flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl text-white">
+            <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4">
+              PREMIUM FURNITURE COLLECTION
+            </div>
+            <h1
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg leading-tight"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Timeless Elegance
+              <br />
+              For Modern Living
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 drop-shadow leading-relaxed">
+              Transform your home with our curated collection of premium
+              furniture. Each piece is crafted with attention to detail,
+              combining functionality with sophisticated design to create spaces
+              that reflect your unique style.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg hover:bg-brand-gold/90 transition-colors font-semibold shadow-lg text-lg">
+                Explore Collection
+              </button>
+              <button className="bg-transparent border-2 border-brand-gold text-brand-gold px-8 py-4 rounded-lg hover:bg-brand-gold/10 transition-colors font-semibold text-lg">
+                View Catalog
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
