@@ -38,7 +38,7 @@ export default function Home() {
 
                 {/* Main Title */}
                 <h2
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white leading-tight"
+                  className="text-2xl md:text-3xl lg:text-5xl font-bold text-brand-white leading-tight"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   Premium Office Furniture

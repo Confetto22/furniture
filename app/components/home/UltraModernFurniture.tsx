@@ -11,6 +11,7 @@ interface Product {
   priceRange: string;
   image: string;
   hoverImage: string;
+  filter: string;
 }
 
 interface Category {
@@ -41,6 +42,8 @@ const products: Product[] = [
   {
     name: "Modern Ceramic Lamp",
     category: "HOME DECORATION",
+    filter: "home",
+
     price: "$ 51.70",
     priceRange: "$ 58.50",
     image:
@@ -50,27 +53,30 @@ const products: Product[] = [
   },
   {
     name: "Soft Seater Chair",
-    category: "HOME DECORATION",
+    category: "OFFICE DECORATION",
+    filter: "office",
     price: "$ 108.95",
     priceRange: "$ 123.50",
     image:
-      "https://images.unsplash.com/photo-1549497538-303791108f95?w=800&q=80",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230728/jcl-furniture/jose-losada-DyFjxmHt3Es-unsplash_im6eue.jpg",
     hoverImage:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228712/jcl-furniture/Picture35_zjxiu5.jpg",
   },
   {
     name: "Elegant Wooden Table",
     category: "HOME DECORATION, OUTDOOR DECORATION",
+    filter: "office",
     price: "$ 88.20",
     priceRange: "$ 146.40",
     image:
-      "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=800&q=80",
+    "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230725/jcl-furniture/still-life-office-chair-indoors_ydr8gm.jpg",
     hoverImage:
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
+    "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228705/jcl-furniture/Picture3_is0q2u.png",
   },
   {
     name: "Round Wood Table",
     category: "HOME DECORATION",
+    filter: "home",
     price: "$ 119.10",
     priceRange: "$ 123.75",
     image:
@@ -81,7 +87,10 @@ const products: Product[] = [
 ];
 
 export default function UltraModernFurniture() {
-  const [activeCategory, setActiveCategory] = useState<string>("home");
+  const [activeCategory, setActiveCategory] = useState<string>("office");
+  const displayProducts = products.filter(
+    (product) => product.filter === activeCategory
+  );
 
   return (
     <section className="bg-brand-dark py-16 md:py-24">
@@ -128,7 +137,10 @@ export default function UltraModernFurniture() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-3 ">
-          {products.map((product, index) => (
+          {/* {products.map((product, index) => (
+            <ProductCard key={index} product={product} />
+          ))} */}
+          {displayProducts.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))}
         </div>
@@ -157,6 +169,8 @@ function ProductCard({ product }: { product: Product }) {
           <Image
             src={product.image}
             alt={product.name}
+            priority
+            loading="eager"
             fill
             className="object-cover"
           />
