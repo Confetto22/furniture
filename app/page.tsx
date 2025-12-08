@@ -19,7 +19,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <section className="bg-gray-900 py-16 md:py-24 min-h-screen">
         <div className="grid grid-cols-1  max-w-7xl mx-auto lg:grid-cols-2 gap-8 lg:gap-12">
@@ -119,7 +119,7 @@ export default function Home() {
       {/* <Testimonials /> */}
       <CustomerTestimonials />
       <Blog />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -5,17 +5,6 @@ import Image from "next/image";
 export default function AboutHero() {
   return (
     <section className="relative w-full min-h-[40vh] overflow-hidden">
-      {/* <div className="absolute inset-0 z-0 min-h-[40vh]">
-        <Image
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80"
-          alt="Modern interior design"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div> */}
-
       <div className="bg-[url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80')] bg-cover bg-center w-full min-h-[60vh] ">
         <div className="content min-h-[60vh] bg-black/70 flex flex-col items-center justify-center w-full h-full">
           {/* Main Title */}
