@@ -41,28 +41,29 @@ export default function Hero() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl text-white">
             <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4">
-              PREMIUM FURNITURE COLLECTION
+              30+ YEARS OF EXCELLENCE
             </div>
             <h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg leading-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Timeless Elegance
+              Professional Office
               <br />
-              For Modern Living
+              Furniture Solutions
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 drop-shadow leading-relaxed">
-              Transform your home with our curated collection of premium
-              furniture. Each piece is crafted with attention to detail,
-              combining functionality with sophisticated design to create spaces
-              that reflect your unique style.
+              Transform your workspace with our premium office furniture
+              collection. Quality office furniture at affordable prices, backed
+              by a 5-year warranty - the longest in Ghana. Experience
+              exceptional service and craftsmanship that has served businesses
+              for over three decades.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg hover:bg-brand-gold/90 transition-colors font-semibold shadow-lg text-lg">
-                Explore Collection
+                Explore Office Furniture
               </button>
               <button className="bg-transparent border-2 border-brand-gold text-brand-gold px-8 py-4 rounded-lg hover:bg-brand-gold/10 transition-colors font-semibold text-lg">
-                View Catalog
+                View Our Services
               </button>
             </div>
           </div>

@@ -84,7 +84,7 @@ const Contact = () => {
               </div>
               <h3 className="text-brand-white font-semibold mb-2">Email Us</h3>
               <p className="text-brand-white/70 text-sm">
-                info@jclservices.com
+                Contact us via email
               </p>
             </div>
 
@@ -94,28 +94,33 @@ const Contact = () => {
                 <Phone className="w-7 h-7 text-brand-gold" />
               </div>
               <h3 className="text-brand-white font-semibold mb-2">Call Us</h3>
-              <p className="text-brand-white/70 text-sm">+1 (555) 123-4567</p>
+              <p className="text-brand-white/70 text-sm">Contact us by phone</p>
             </div>
 
-            {/* Location */}
+            {/* Main Office Location */}
             <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-7 h-7 text-brand-gold" />
               </div>
-              <h3 className="text-brand-white font-semibold mb-2">Visit Us</h3>
-              <p className="text-brand-white/70 text-sm">
-                123 Furniture Street, Design District
+              <h3 className="text-brand-white font-semibold mb-2">
+                Main Office
+              </h3>
+              <p className="text-brand-white/70 text-sm leading-relaxed">
+                Kokomlemle, just before the Circle overpass connecting
+                Kokomlemle to Adabraka
               </p>
             </div>
 
-            {/* Hours */}
+            {/* Branch Office Location */}
             <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors">
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-7 h-7 text-brand-gold" />
+                <MapPin className="w-7 h-7 text-brand-gold" />
               </div>
-              <h3 className="text-brand-white font-semibold mb-2">Hours</h3>
-              <p className="text-brand-white/70 text-sm">
-                Mon - Sat: 9AM - 6PM
+              <h3 className="text-brand-white font-semibold mb-2">
+                Branch Office
+              </h3>
+              <p className="text-brand-white/70 text-sm leading-relaxed">
+                Swanzy Shopping Arcade near Cocoa House, Accra Central
               </p>
             </div>
           </div>

@@ -9,11 +9,16 @@ export default function AboutHero() {
         <div className="content min-h-[60vh] bg-brand-dark/80 flex flex-col items-center justify-center w-full h-full">
           {/* Main Title */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl text-brand-white mb-6 drop-shadow-lg"
+            className="text-5xl md:text-6xl lg:text-7xl text-brand-white mb-4 drop-shadow-lg"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             About Us
           </h1>
+
+          {/* Subtitle */}
+          <p className="text-brand-gold text-lg md:text-xl mb-6 drop-shadow">
+            Established 1993 • Incorporated 2010
+          </p>
 
           {/* Breadcrumbs */}
           <div className="text-sm font-semibold md:text-base text-brand-white/90 font-light tracking-wide">

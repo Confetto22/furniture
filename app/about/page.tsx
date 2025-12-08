@@ -5,6 +5,10 @@ import SpecialTeam from "../components/about/SpecialTeam";
 import CustomerTestimonials from "../components/about/CustomerTestimonials";
 import Partners from "../components/about/Partners";
 import Newsletter from "../components/about/Newsletter";
+import VisionMission from "../components/about/VisionMission";
+import Representation from "../components/about/Representation";
+import EquipmentCapabilities from "../components/about/EquipmentCapabilities";
+import OfficeLocations from "../components/about/OfficeLocations";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
@@ -24,7 +28,7 @@ const About = () => {
               <div className="space-y-6">
                 {/* Label */}
                 <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider">
-                  WE DESIGN
+                  OUR STORY
                 </div>
 
                 {/* Main Title */}
@@ -32,19 +36,20 @@ const About = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white leading-tight"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  World Class Furniture&apos;s For
+                  Three Decades of
                   <br />
-                  Ultimate Comfort
+                  Excellence & Growth
                 </h2>
 
                 {/* Paragraph */}
                 <p className="text-brand-white/80 text-base md:text-lg leading-relaxed">
-                  At JCL Services, we believe that exceptional furniture is the
-                  foundation of a beautiful home. Our team of skilled designers
-                  and craftsmen work tirelessly to create pieces that combine
-                  timeless elegance with modern functionality, ensuring every
-                  item in our collection meets the highest standards of quality
-                  and comfort.
+                  JCL Services Limited, incorporated in 2010, evolved from JCL
+                  Services which was established in 1993 as general merchants to
+                  provide supply services of general office and household
+                  equipment and their various accessories to the general public.
+                  Over the years, we have expanded our services to become a
+                  trusted provider of office furniture, workspace solutions, and
+                  comprehensive business services across Ghana.
                 </p>
               </div>
 
@@ -75,15 +80,16 @@ const About = () => {
               <div className="space-y-6">
                 {/* Subtitle */}
                 <h3 className="text-3xl md:text-4xl font-bold text-brand-white">
-                  Crafting Quality Furniture
+                  Our Evolution & Services
                 </h3>
 
                 {/* Paragraph */}
                 <p className="text-brand-white/80 text-base md:text-lg leading-relaxed">
-                  With decades of experience in the furniture industry, we
-                  understand that true luxury lies in the details. Each piece is
-                  carefully selected and crafted to bring beauty, comfort, and
-                  functionality to your living spaces.
+                  In its evolution, JCL Services Limited has expanded to offer a
+                  comprehensive range of services including office furniture
+                  dealership, stationery and printing materials, computer
+                  accessories, electronic appliances, civil and electrical
+                  engineering services, and import/export operations.
                 </p>
 
                 {/* Bullet Points */}
@@ -91,19 +97,19 @@ const About = () => {
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Premium materials sourced from trusted suppliers worldwide
+                      Dealership in Office Furniture & Computer Accessories
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Expert craftsmanship ensuring durability and longevity
+                      Stationery, Printing Materials & Printing Press Services
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Sustainable practices that respect our environment
+                      Civil & Electrical Engineering including Plumbing
                     </span>
                   </li>
                 </ul>
@@ -112,12 +118,16 @@ const About = () => {
           </div>
         </div>
       </section>
+      <VisionMission />
       <CustomizedFurniture />
       <AboutStats />
       {/* <CustomizedFurniture /> */}
-      <SpecialTeam />
-      <CustomerTestimonials />
+      {/* <SpecialTeam /> */}
+      {/* <CustomerTestimonials /> */}
       <Partners />
+      <Representation />
+      {/* <EquipmentCapabilities /> */}
+      <OfficeLocations />
       <Newsletter />
     </section>
   );

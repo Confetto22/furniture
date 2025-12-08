@@ -27,29 +27,29 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "For furniture purchases, do you have financing options?",
+    question: "What warranty do you offer on office furniture?",
     answer:
-      "Yes, we offer flexible financing options to make your dream furniture purchases more accessible. We partner with trusted financial institutions to provide competitive rates and convenient payment plans. You can apply for financing during checkout, and our team will guide you through the process. Terms and eligibility vary based on purchase amount and credit history.",
+      "We offer a 5-year warranty on our office furniture - the longest warranty period available on the Ghanaian market. This demonstrates our confidence in the quality and durability of our products. Our numerous customers, both single buyers and companies, attest to the exceptional durability of our furniture.",
   },
   {
-    question: "Do you have eco-friendly furniture?",
+    question: "What are your payment terms?",
     answer:
-      "Absolutely! We are committed to sustainability and offer an extensive collection of eco-friendly furniture. Our green collection features pieces made from sustainably sourced wood, recycled materials, and low-VOC finishes. All our eco-friendly products are clearly labeled, and we provide detailed information about their environmental impact and certifications.",
+      "Our payment terms have no equal on the local market. We always see from the viewpoint of our customers and deal fairly with them. Our prices are most competitive and almost always negotiable. We work with you to find payment solutions that fit your budget and timeline.",
   },
   {
-    question: "Is it possible to follow the delivery of my furniture?",
+    question: "Do you offer custom office furniture designs?",
     answer:
-      "Yes, you can track your furniture delivery in real-time. Once your order is confirmed, you'll receive a tracking number via email and SMS. You can monitor your shipment's progress through our online tracking system or mobile app. We'll also send you notifications at key stages: when your order ships, when it's out for delivery, and when it arrives.",
+      "Yes, we design and manufacture general goods and services to customer specifications. On the local market, we create custom solutions tailored to your exact requirements. A typical example is when JCL Services manufactured Wooden Pallets for COCOBOD when we won the contract to supply.",
   },
   {
-    question: "Do you offer design consultations?",
+    question: "Do you supply office equipment and accessories?",
     answer:
-      "We offer complimentary design consultations with our experienced interior design specialists. Whether you're furnishing a single room or an entire home, our designers can help you create cohesive, beautiful spaces. Consultations are available in-store, via video call, or through our online design tool. Book your consultation through our website or by contacting our customer service team.",
+      "Absolutely! We provide dealership in computers, accessories, and office furniture. Our office equipment and supplies are all high specs models, and the furniture are quality incarnate but are affordably priced for every pocket in Ghana. We also offer stationery, printing materials, and electronic appliances.",
   },
   {
-    question: "Are custom orders accepted for furniture that isn't in stock?",
+    question: "Can you handle large commercial orders?",
     answer:
-      "Yes, we accept custom orders for furniture that isn't currently in stock or for pieces with specific modifications. Our custom furniture service allows you to choose materials, finishes, dimensions, and design details to match your exact requirements. Custom orders typically take 6-12 weeks for completion. Contact our sales team to discuss your custom furniture needs and receive a detailed quote.",
+      "Yes, we handle projects of all sizes. Whether you're furnishing a single office or an entire commercial building, we have the capacity and experience to meet your needs. We've successfully completed projects for various companies and institutions across Ghana, including large-scale contracts like the COCOBOD project.",
   },
 ];
 

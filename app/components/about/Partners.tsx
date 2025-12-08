@@ -11,30 +11,22 @@ interface Partner {
 
 const partners: Partner[] = [
   {
-    name: "Brown Donkey",
+    name: "Kouching Bvi Co. Ltd.",
+    subtitle: "Taipei Hsien, Taiwan",
     image:
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
   },
   {
-    name: "Balerie",
+    name: "Guangzhou Kuo Ching",
+    subtitle: "Office Furniture Co. Ltd. China",
     image:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
   },
   {
-    name: "Maskan",
+    name: "Lopo Furniture Co. Ltd.",
+    subtitle: "Guangzhou, China",
     image:
       "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
-  },
-  {
-    name: "Saltwater",
-    image:
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
-  },
-  {
-    name: "Amishar",
-    subtitle: "ALPHABET",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
   },
 ];
 
@@ -44,7 +36,7 @@ export default function Partners() {
   return (
     <section className="bg-brand-dark py-16 w-full md:py-24">
       <div className=" w-full ">
-        <div className="grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-5 gap-0">
+        <div className="grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {partners.map((partner, index) => (
             <div
               key={index}
@@ -79,51 +71,19 @@ export default function Partners() {
 
               {/* Brand Name Content */}
               <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 text-center transition-transform duration-300 group-hover:scale-105">
-                {partner.name === "Brown Donkey" ? (
-                  <div className="text-brand-white">
-                    <div
-                      className="text-2xl md:text-3xl font-bold mb-1"
-                      style={{ fontFamily: "var(--font-playfair)" }}
-                    >
-                      Brown
-                    </div>
-                    <div
-                      className="text-2xl md:text-3xl font-bold"
-                      style={{ fontFamily: "var(--font-playfair)" }}
-                    >
-                      Donkey
-                    </div>
-                  </div>
-                ) : partner.name === "Maskan" ? (
-                  <div className="text-brand-white">
-                    <div
-                      className="text-3xl md:text-4xl font-bold relative inline-block"
-                      style={{ fontFamily: "var(--font-playfair)" }}
-                    >
-                      {partner.name}
-                      <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-gold transform -skew-x-12"></span>
-                    </div>
-                  </div>
-                ) : partner.name === "Amishar" ? (
-                  <div className="text-brand-white">
-                    <div
-                      className="text-3xl md:text-4xl font-bold mb-1"
-                      style={{ fontFamily: "var(--font-playfair)" }}
-                    >
-                      {partner.name}
-                    </div>
-                    <div className="text-xs md:text-sm uppercase tracking-widest text-brand-white/80">
-                      {partner.subtitle}
-                    </div>
-                  </div>
-                ) : (
+                <div className="text-brand-white">
                   <div
-                    className="text-brand-white text-3xl md:text-4xl font-bold"
+                    className="text-2xl md:text-3xl font-bold mb-2"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {partner.name}
                   </div>
-                )}
+                  {partner.subtitle && (
+                    <div className="text-xs md:text-sm uppercase tracking-widest text-brand-white/80">
+                      {partner.subtitle}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}

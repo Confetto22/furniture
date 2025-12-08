@@ -1,11 +1,13 @@
 import Header from "./components/Header";
 import Hero from "./components/home/Hero";
+import Services from "./components/home/Services";
 import Features from "./components/home/Features";
 import HomeDecorHub from "./components/home/HomeDecorHub";
 import ProductGrid from "./components/home/ProductGrid";
 import ShopByCategory from "./components/home/ShopByCategory";
 import UltraModernFurniture from "./components/home/UltraModernFurniture";
 import FAQ from "./components/home/FAQ";
+import WhyChooseUs from "./components/home/WhyChooseUs";
 import InnovativeFurniture from "./components/home/InnovativeFurniture";
 import Testimonials from "./components/home/Testimonials";
 import Blog from "./components/home/Blog";
@@ -21,6 +23,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* <Header /> */}
       <Hero />
+      <Services />
       <section className="bg-brand-dark py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -30,7 +33,7 @@ export default function Home() {
               <div className="space-y-6">
                 {/* Label */}
                 <h3 className="text-brand-gold text-sm font-semibold uppercase tracking-wider">
-                  HOME DECOR HUB
+                  OFFICE SOLUTIONS
                 </h3>
 
                 {/* Main Title */}
@@ -38,16 +41,18 @@ export default function Home() {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white leading-tight"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Exceptional Furniture For Indoor &amp; Outdoor
+                  Premium Office Furniture
+                  <br />& Workspace Solutions
                 </h2>
 
                 {/* Paragraph */}
                 <p className="text-brand-white/80 text-base md:text-lg leading-relaxed">
-                  Discover our extensive collection of premium furniture
-                  designed for both indoor and outdoor spaces. From elegant
-                  living room sets to durable patio furniture, we offer pieces
-                  that combine style, comfort, and functionality to enhance
-                  every corner of your home.
+                  Established in 1993 and incorporated as JCL Services Limited
+                  in 2010, we have been providing quality office furniture and
+                  workspace solutions to businesses across Ghana. Our
+                  comprehensive range includes office furniture, computer
+                  accessories, stationery, and printing materials - all at
+                  competitive and negotiable prices.
                 </p>
               </div>
 
@@ -78,15 +83,15 @@ export default function Home() {
               <div className="space-y-6">
                 {/* Subtitle */}
                 <h3 className="text-3xl md:text-4xl font-bold text-brand-white">
-                  Discover Endless Designs
+                  Quality & Affordability Combined
                 </h3>
 
                 {/* Paragraph */}
                 <p className="text-brand-white/80 text-base md:text-lg leading-relaxed">
-                  Our curated selection features furniture from renowned
-                  designers and craftsmen worldwide. Whether you prefer modern
-                  minimalism or classic elegance, we have the perfect pieces to
-                  bring your vision to life.
+                  Our office equipment and supplies are all high specs models,
+                  and our furniture are quality incarnate but are affordably
+                  priced for every pocket in Ghana. With over 30 years of
+                  experience, we understand what businesses need.
                 </p>
 
                 {/* Bullet Points */}
@@ -94,20 +99,19 @@ export default function Home() {
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Premium quality materials ensuring durability and
-                      longevity
+                      5-year warranty - the longest available in Ghana
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Expert craftsmanship with attention to every detail
+                      Competitive and negotiable pricing terms
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="text-brand-gold w-5 h-5 mt-1 shrink-0" />
                     <span className="text-brand-white/80 text-base">
-                      Sustainable and eco-friendly manufacturing practices
+                      Custom designs to customer specifications
                     </span>
                   </li>
                 </ul>
@@ -117,6 +121,7 @@ export default function Home() {
         </div>
       </section>
       {/* <Features /> */}
+      <WhyChooseUs />
       <ArtOfCoziness />
       {/* <HomeDecorHub /> */}
       {/* <ProductGrid /> */}

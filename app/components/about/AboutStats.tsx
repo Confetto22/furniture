@@ -8,15 +8,15 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { value: "10K+", label: "Products Sold" },
-  { value: 35, label: "Years Service" },
-  { value: 450, label: "Outlets Worldwide" },
-  { value: "1000+", label: "Satisfied Customers" },
+  { value: "30+", label: "Years in Business" },
+  { value: "10", label: "Team Members" },
+  { value: "2", label: "Office Locations" },
+  { value: "5", label: "Years Warranty" },
 ];
 
 export default function AboutStats() {
   return (
-    <section className="relative w-full border border-white/10 overflow-hidden">
+    <section className="relative w-full border border-brand-gold overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

@@ -1,37 +1,59 @@
 "use client";
 
-import Image from "next/image";
-
 interface TeamMember {
   name: string;
   title: string;
-  image: string;
+  initials: string;
+  bio?: string;
+  experience?: string;
+  qualifications?: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Charles Carter",
-    title: "CEO",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-  },
-  {
-    name: "Lina Hendrick",
-    title: "Product Designer",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
-  },
-  {
-    name: "Roger Marcus",
-    title: "VP Sales",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-  },
-  {
-    name: "Mark Harrison",
+    name: "Robert Frimpong Ofori",
     title: "Managing Director",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+    initials: "RF",
+    bio: "Established and ran this business for the past 18 years, facing challenges that would have scared any faint-hearted away.",
+    experience: "18+ years",
+    qualifications:
+      "Controls the International Order and Import section, including sourcing projects for the company.",
+  },
+  {
+    name: "Gideon Ofori Korankye",
+    title: "General Manager",
+    initials: "GK",
+    bio: "Strategic Planning Executive of the setup, advising on modern equipment and products from outside likely to be on request on the Ghanaian market.",
+    experience: "Long-term strategic planning",
+    qualifications:
+      "Has held this Strategic Planning position for a long time with valuable counsel on all range of goods and services.",
+  },
+  {
+    name: "Anniversary Thomas Tehoda",
+    title: "Administrator",
+    initials: "AT",
+    bio: "Walk-in Administrator for the setup, has been in this position for the past 9 years.",
+    experience: "9 years",
+    qualifications:
+      "Diploma in Business Studies (DBS), Certificate in Project Monitoring & Evaluation from GIMPA. Previously worked on World Bank Projects with Department of Urban Roads.",
+  },
+  {
+    name: "Janice Omari Frimpong Ofori",
+    title: "Directress",
+    initials: "JO",
+    bio: "Highly accomplished Civil Engineer responsible for Civil Works, Interior Décor, and Furniture Supply.",
+    experience: "18+ years",
+    qualifications:
+      "Civil Engineer leading execution of interior finishing, space planning, décor installations, and tailored furniture solutions for residential, commercial, and institutional projects.",
+  },
+  {
+    name: "Emmanuel Obeng Yeboah",
+    title: "Civil Engineer",
+    initials: "EO",
+    bio: "Certified Civil Engineer with over a decade of experience in planning, supervision, and execution of infrastructure projects.",
+    experience: "10+ years",
+    qualifications:
+      "Bachelor's degree in Civil Engineering from KNUST. Registered member of Ghana Institution of Engineering (GhIE).",
   },
 ];
 
@@ -53,30 +75,39 @@ export default function SpecialTeam() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
               className="bg-brand-dark rounded-lg overflow-hidden hover:border-brand-gold/40 transition-all border border-brand-white/10 shadow-md hover:shadow-lg"
             >
-              {/* Member Image */}
-              <div className="relative w-full aspect-square overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-500"
-                />
+              {/* Avatar with Initials */}
+              <div className="relative w-full aspect-square bg-brand-dark-light flex items-center justify-center">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-brand-gold flex items-center justify-center shadow-lg">
+                  <span className="text-brand-dark text-4xl md:text-5xl font-bold">
+                    {member.initials}
+                  </span>
+                </div>
               </div>
 
               {/* Member Info */}
               <div className="p-6 text-center bg-brand-dark">
-                <h3 className="text-xl md:text-2xl font-semibold text-brand-white mb-2">
+                <h3 className="text-xl md:text-2xl font-semibold text-brand-white mb-1">
                   {member.name}
                 </h3>
-                <p className="text-brand-white/70 text-sm md:text-base">
+                <p className="text-brand-gold text-sm md:text-base font-medium mb-3">
                   {member.title}
                 </p>
+                {member.experience && (
+                  <p className="text-brand-white/60 text-xs mb-2">
+                    {member.experience} Experience
+                  </p>
+                )}
+                {member.bio && (
+                  <p className="text-brand-white/70 text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
+                )}
               </div>
             </div>
           ))}
