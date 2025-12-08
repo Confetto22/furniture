@@ -1,86 +1,160 @@
-'use client';
+"use client";
+
+import Image from "next/image";
+import { Instagram, Facebook, Youtube, Twitter, ArrowUp } from "lucide-react";
+
+const instagramImages = [
+  "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80",
+  "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=200&q=80",
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=200&q=80",
+  "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=200&q=80",
+  "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=200&q=80",
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&q=80",
+];
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-12">
-        {/* Newsletter Section */}
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Art Of Comfort</h2>
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Transforming Spaces, Transforming Style</h3>
-          <p className="text-primary-foreground/80 mb-6">Your email is safe with us, we dont spam. Privacy Policy</p>
-          <div className="max-w-md mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <h4 className="font-semibold mb-2">Transit Protocol</h4>
-              <p className="text-sm text-primary-foreground/70">Eget arcu dictum varius duis at lorem donec.</p>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold mb-2">Chat Assistance</h4>
-              <p className="text-sm text-primary-foreground/70">Quam quisque id diam vel quam aecenas.</p>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold mb-2">Email Interaction</h4>
-              <p className="text-sm text-primary-foreground/70">Quis varius quam id diam vel lecento.</p>
-            </div>
-            <div className="text-center">
-              <h4 className="font-semibold mb-2">Global Stores</h4>
-              <p className="text-sm text-primary-foreground/70">Condimentum id venenatis a vitae sapien.</p>
-            </div>
-          </div>
-        </div>
-
+    <footer className="bg-brand-dark text-brand-white">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+          {/* Brand Column */}
           <div>
-            <h4 className="text-xl font-bold mb-4">TeaPoy Site</h4>
-            <p className="text-primary-foreground/70 text-sm">
-              Proin a interdum elit. Etiam eu sapien sem. Suspendisse a massa justo. 
-              Cras eget lorem nunc. Fusce nec urna tempus tempus
+            {/* Logo */}
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center">
+                <span className="text-brand-dark text-xl font-bold">J</span>
+              </div>
+              <span className="text-2xl font-bold text-brand-white">
+                JCL Services
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="text-brand-white/70 text-sm leading-relaxed mb-6">
+              We are dedicated to providing exceptional furniture solutions that
+              combine timeless elegance with modern functionality. Our carefully
+              curated collections transform spaces into beautiful, comfortable
+              environments that reflect your unique style and personality.
             </p>
+
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4">
+              <a
+                href="#"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="text-brand-white/70 hover:text-brand-gold transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
           </div>
+
+          {/* Quick Links Column */}
           <div>
-            <h4 className="font-semibold mb-4">Useful links</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">History</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Our Team</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Services Offered</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Product Catalog</a></li>
+            <h4 className="text-brand-white font-bold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-brand-white/70">
+              <li>
+                <a href="/" className="hover:text-brand-gold transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="hover:text-brand-gold transition-colors"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Collection
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-brand-gold transition-colors">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
+
+          {/* Instagram Feed Column */}
           <div>
-            <h4 className="font-semibold mb-4">Information</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">FAQ/Return</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy/Terms</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Affiliate</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Sizing Guide</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Accessibility</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Your Account</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Press Release</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Return Centre</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">App Download</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Advertisements</a></li>
-            </ul>
+            <h4 className="text-brand-white font-bold mb-4">
+              Follow @Instagram
+            </h4>
+            <div className="grid grid-cols-3 gap-2">
+              {instagramImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
+                >
+                  <Image
+                    src={image}
+                    alt={`Instagram post ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-primary-foreground/70 text-sm mb-4 md:mb-0">
-            ©TeaPoy site all rights Reserved
-          </p>
-          <div className="text-sm text-primary-foreground/70">
-            Follow @Instagram
+        <div className="border-t border-brand-white/10 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <p className="text-brand-white/70 text-sm">
+              ©JCL Services all rights Reserved
+            </p>
+
+            {/* Scroll to Top Button */}
+            <button
+              onClick={scrollToTop}
+              className="w-14 h-14 bg-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold/90 transition-colors relative group"
+              aria-label="Scroll to top"
+            >
+              <ArrowUp className="w-5 h-5 text-brand-dark z-10" />
+              <span className="text-brand-dark text-[9px] font-semibold absolute left-1 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
+                TOP
+              </span>
+            </button>
           </div>
         </div>
       </div>
     </footer>
   );
 }
-

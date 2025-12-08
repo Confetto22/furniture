@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Playfair_Display,
+  Marcellus,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,9 +17,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+});
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "TeaPoy Site - Exceptional Furniture's For Indoor & Outdoor",
-  description: "Discover timeless elegance and innovative furniture solutions for your home. Shop our luxurious collection of indoor and outdoor furniture.",
+  title: "JCL Services - Exceptional Furniture's For Indoor & Outdoor",
+  description:
+    "Discover timeless elegance and innovative furniture solutions for your home. Explore our luxurious collection of indoor and outdoor furniture.",
 };
 
 export default function RootLayout({
@@ -25,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${marcellus.variable} antialiased`}
       >
         {children}
       </body>

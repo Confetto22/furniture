@@ -1,0 +1,50 @@
+/* Customer Testimonials Swiper Custom Styles */
+.customer-testimonials-swiper {
+  position: relative;
+  padding: 0 60px;
+}
+
+.customer-testimonials-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom Navigation Buttons */
+.customer-testimonials-prev,
+.customer-testimonials-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.customer-testimonials-prev {
+  left: 0;
+}
+
+.customer-testimonials-next {
+  right: 0;
+}
+
+.customer-testimonials-prev:hover,
+.customer-testimonials-next:hover {
+  opacity: 0.8;
+}
+
+/* Disable default Swiper navigation */
+.customer-testimonials-swiper .swiper-button-next,
+.customer-testimonials-swiper .swiper-button-prev {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .customer-testimonials-swiper {
+    padding: 0 50px;
+  }
+}
