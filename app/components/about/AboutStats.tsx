@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import CountUp from "react-countup";
 
 interface StatItem {
-  value: string | number;
+  value: number;
   label: string;
 }
 
 const stats: StatItem[] = [
-  { value: "30+", label: "Years in Business" },
-  { value: "10", label: "Team Members" },
-  { value: "2", label: "Office Locations" },
-  { value: "5", label: "Years Warranty" },
+  { value: 30, label: "Years in Business" },
+  { value: 10, label: "Team Members" },
+  { value: 2, label: "Office Locations" },
+  { value: 5, label: "Years Warranty" },
 ];
 
 export default function AboutStats() {
@@ -40,12 +41,18 @@ export default function AboutStats() {
               className="flex py-12  flex-col items-center justify-center  px-4 border-r border-brand-white/10 last:border-r-0"
             >
               {/* Number Value */}
-              <div
+              <p
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white mb-3"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                {stat.value}
-              </div>
+                <CountUp
+                  end={stat.value}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  duration={4}
+                />{" "}
+                +
+              </p>
 
               {/* Description */}
               <div className="text-sm md:text-base text-brand-white/90 text-center font-light tracking-wide">

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Briefcase,
   Printer,
@@ -84,20 +85,51 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <div
+            <motion.div
+              initial={{ filter: "blur(8px)" }}
+              whileInView={{ filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              exit={{ filter: "blur(5px)" }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: "easeOut",
+              }}
               key={index}
               className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 hover:border-brand-gold/40 transition-all shadow-md hover:shadow-lg group"
             >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-gold/30 transition-colors">
                 <div className="text-brand-gold">{service.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-brand-white mb-2">
+              <motion.h3
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+                className="text-xl font-bold text-brand-white mb-2"
+              >
                 {service.name}
-              </h3>
-              <p className="text-brand-white/70 text-sm leading-relaxed">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+                className="text-brand-white/70 text-sm leading-relaxed"
+              >
                 {service.description}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           ))}
         </div>
       </div>

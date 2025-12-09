@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface CategoryCard {
   name: string;
@@ -120,14 +121,25 @@ function CategoryCard({
   return (
     <div className="relative w-full h-full rounded-lg overflow-hidden cursor-pointer group">
       {/* Image Container with Overflow Hidden */}
-      <div className="absolute inset-0 overflow-hidden">
+      <motion.div
+        initial={{ filter: "blur(8px)" }}
+        whileInView={{ filter: "blur(0px)" }}
+        viewport={{ once: true }}
+        exit={{ filter: "blur(5px)" }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+          ease: "easeOut",
+        }}
+        className="absolute inset-0 overflow-hidden "
+      >
         <Image
           src={image}
           alt={name}
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />
-      </div>
+      </motion.div>
 
       {/* Text Overlay - Bottom Left Corner */}
       <div className="absolute cover bottom-0 left-0 p-6 md:p-8 z-10">

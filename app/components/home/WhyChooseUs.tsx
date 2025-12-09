@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Shield,
   DollarSign,
@@ -79,20 +80,51 @@ export default function WhyChooseUs() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (
-            <div
+            <motion.div
+              initial={{ filter: "blur(8px)" }}
+              whileInView={{ filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              exit={{ filter: "blur(5px)" }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: "easeOut",
+              }}
               key={index}
               className="bg-brand-dark border border-brand-white/10 rounded-lg p-6 lg:p-8 hover:border-brand-gold/40 transition-all shadow-md hover:shadow-lg"
             >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4">
                 <div className="text-brand-gold">{feature.icon}</div>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-white mb-3">
+              <motion.h3
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+                className="text-xl md:text-2xl font-bold text-brand-white mb-3"
+              >
                 {feature.title}
-              </h3>
-              <p className="text-brand-white/70 text-sm md:text-base leading-relaxed">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                viewport={{ once: true }}
+                exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+                className="text-brand-white/70 text-sm md:text-base leading-relaxed"
+              >
                 {feature.description}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           ))}
         </div>
       </div>
