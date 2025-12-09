@@ -14,43 +14,31 @@ interface Product {
   filter: string;
 }
 
-interface Category {
-  id: string;
-  name: string;
-  icon: React.ReactNode;
-}
+// interface Category {
+//   id: string;
+//   name: string;
+//   icon: React.ReactNode;
+// }
 
-const categories: Category[] = [
-  {
-    id: "home",
-    name: "Home Decoration",
-    icon: <Sofa className="w-5 h-5" />,
-  },
-  {
-    id: "office",
-    name: "Office Decoration",
-    icon: <Briefcase className="w-5 h-5" />,
-  },
-  {
-    id: "indoor",
-    name: "Indoor Decoration",
-    icon: <Sprout className="w-5 h-5" />,
-  },
-];
+// const categories: Category[] = [
+//   {
+//     id: "home",
+//     name: "Home Decoration",
+//     icon: <Sofa className="w-5 h-5" />,
+//   },
+//   {
+//     id: "office",
+//     name: "Office Decoration",
+//     icon: <Briefcase className="w-5 h-5" />,
+//   },
+//   {
+//     id: "indoor",
+//     name: "Indoor Decoration",
+//     icon: <Sprout className="w-5 h-5" />,
+//   },
+// ];
 
 const products: Product[] = [
-  {
-    name: "Modern Ceramic Lamp",
-    category: "HOME DECORATION",
-    filter: "home",
-
-    price: "$ 51.70",
-    priceRange: "$ 58.50",
-    image:
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
-    hoverImage:
-      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&q=80",
-  },
   {
     name: "Soft Seater Chair",
     category: "OFFICE DECORATION",
@@ -58,7 +46,7 @@ const products: Product[] = [
     price: "$ 108.95",
     priceRange: "$ 123.50",
     image:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230728/jcl-furniture/jose-losada-DyFjxmHt3Es-unsplash_im6eue.jpg",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765296590/jcl/office-desktop-with-swivel-chair_bx4nag.webp",
     hoverImage:
       "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228712/jcl-furniture/Picture35_zjxiu5.jpg",
   },
@@ -69,28 +57,17 @@ const products: Product[] = [
     price: "$ 88.20",
     priceRange: "$ 146.40",
     image:
-    "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230725/jcl-furniture/still-life-office-chair-indoors_ydr8gm.jpg",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282630/jcl/image_1024_egukhs.jpg",
     hoverImage:
-    "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228705/jcl-furniture/Picture3_is0q2u.png",
-  },
-  {
-    name: "Round Wood Table",
-    category: "HOME DECORATION",
-    filter: "home",
-    price: "$ 119.10",
-    priceRange: "$ 123.75",
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
-    hoverImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228705/jcl-furniture/Picture3_is0q2u.png",
   },
 ];
 
 export default function UltraModernFurniture() {
-  const [activeCategory, setActiveCategory] = useState<string>("office");
-  const displayProducts = products.filter(
-    (product) => product.filter === activeCategory
-  );
+  // const [activeCategory, setActiveCategory] = useState<string>("office");
+  // const displayProducts = products.filter(
+  //   (product) => product.filter === activeCategory
+  // );
 
   return (
     <section className="bg-brand-dark py-16 md:py-24">
@@ -109,7 +86,7 @@ export default function UltraModernFurniture() {
         </div>
 
         {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 md:mb-16">
+        {/* <div className="flex flex-wrap justify-center gap-4 mb-12 md:mb-16">
           {categories.map((category) => {
             const isActive = activeCategory === category.id;
             return (
@@ -133,14 +110,14 @@ export default function UltraModernFurniture() {
               </button>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-3 ">
           {/* {products.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))} */}
-          {displayProducts.map((product, index) => (
+          {products.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))}
         </div>

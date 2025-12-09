@@ -27,21 +27,21 @@ const roomCategories: RoomCategory[] = [
     name: "Dining Room",
     icon: <UtensilsCrossed className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765294875/jcl/costa-live-bkLo8CIIAnM-unsplash_lu4wsi.webp",
   },
   {
     id: "living",
     name: "Living Room",
     icon: <Sofa className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765295113/jcl/albero-furniture-bratislava-sJWyt9BHkB0-unsplash_iucfbl.webp",
   },
   {
     id: "kitchen",
     name: "Kitchen",
     icon: <ChefHat className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765295695/jcl/mid-century-interior-design_eadtac.webp",
   },
   {
     id: "office",
@@ -55,19 +55,19 @@ const roomCategories: RoomCategory[] = [
     name: "Bed Room",
     icon: <Bed className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765294988/jcl/albero-furniture-bratislava-u88zDvr5V6g-unsplash_hccvtr.webp",
   },
   {
     id: "waiting",
     name: "Waiting Hall",
     icon: <Users className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765295527/jcl/luxury-interior-decor-with-natural-lighting-ambiance-generated-by-ai_qemnxw.webp",
   },
 ];
 
 export default function CustomizedFurniture() {
-  const [activeRoom, setActiveRoom] = useState<string>("dining");
+  const [activeRoom, setActiveRoom] = useState<string>("office");
   const activeRoomData = roomCategories.find((room) => room.id === activeRoom);
 
   return (
@@ -98,26 +98,6 @@ export default function CustomizedFurniture() {
               className="object-cover"
               priority
             />
-
-            {/* Overlay Controls */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              {/* Fullscreen Button - Top Right */}
-              <button
-                className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded backdrop-blur-sm transition-colors z-10"
-                aria-label="Fullscreen"
-              >
-                <Maximize2 className="w-5 h-5 text-white" />
-              </button>
-
-              {/* Screenshot Button - Bottom Left */}
-              {/* <button
-                className="absolute bottom-4 left-4 px-4 py-2 bg-black/60 hover:bg-black/80 rounded backdrop-blur-sm text-white text-sm transition-colors z-10"
-                aria-label="Screenshot"
-              >
-                <Camera className="w-4 h-4 inline-block mr-2" />
-                Screenshot
-              </button> */}
-            </div>
           </div>
 
           {/* Right Column - Room Categories Grid */}
