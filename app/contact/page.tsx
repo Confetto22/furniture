@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-brand-dark">
+    <section className="bg-brand-dark overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative w-full  overflow-hidden">
         <div className="bg-[url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80')] bg-cover bg-center w-full md:min-h-[60vh] min-h-[40vh] ">

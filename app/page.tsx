@@ -22,7 +22,7 @@ import Alternate from "./components/common/alternate";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="overflow-x-hidden">
       {/* <Header /> */}
       <Hero />
 

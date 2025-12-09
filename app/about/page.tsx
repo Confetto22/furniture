@@ -16,7 +16,7 @@ import AboutAlternate from "../components/about/AboutAlternate";
 
 const About = () => {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <AboutHero />
 
       {/* <AboutContent /> */}
