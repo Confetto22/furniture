@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-  const [agreed, setAgreed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,29 +70,6 @@ export default function Newsletter() {
               >
                 <ArrowRight className="w-6 h-6 text-brand-dark" />
               </button>
-            </div>
-
-            {/* Privacy Notice */}
-            <div className="flex items-start justify-center gap-3 text-left">
-              <input
-                type="checkbox"
-                id="privacy-agree"
-                checked={agreed}
-                onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-1 w-4 h-4 border-brand-white/40 rounded focus:ring-brand-gold text-brand-gold accent-brand-gold"
-              />
-              <label
-                htmlFor="privacy-agree"
-                className="text-brand-white/80 text-sm md:text-base cursor-pointer"
-              >
-                Your email is safe with us, we dont spam.{" "}
-                <a
-                  href="#"
-                  className="text-brand-gold hover:text-brand-gold/80 underline transition-colors"
-                >
-                  Privacy Policy
-                </a>
-              </label>
             </div>
           </form>
         </div>

@@ -107,21 +107,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Social Media Icons */}
-            <menu className="hidden md:flex items-center gap-4">
-              {socials.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.refLink}
-                  target="_blank"
-                  className="text-brand-dark hover:text-brand-gold transition-colors"
-                  aria-label="Instagram"
-                >
-                  <social.icon className="w-5 h-5" />
-                </Link>
-              ))}
-            </menu>
-
             {/* Mobile Menu Button */}
             <div className="flex items-center lg:hidden">
               <button

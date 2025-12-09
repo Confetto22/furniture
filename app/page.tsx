@@ -23,7 +23,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* <Header /> */}
       <Hero />
-      <Services />
+
       <section className="bg-brand-dark py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -59,7 +59,7 @@ export default function Home() {
               {/* Bottom Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230725/jcl-furniture/still-life-office-chair-indoors_ydr8gm.jpg"
+                  src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230717/jcl-furniture/3d-rendering-business-meeting-working-room-office-building_qyd4z2.jpg"
                   alt="Modern living and dining area"
                   fill
                   priority
@@ -74,7 +74,7 @@ export default function Home() {
               {/* Top Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230717/jcl-furniture/3d-rendering-business-meeting-working-room-office-building_qyd4z2.jpg"
+                  src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282941/jcl/product-jpeg_ehzhia.jpg"
                   priority
                   loading="eager"
                   alt="Cozy modern living room"
@@ -124,6 +124,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Services />
       {/* <Features /> */}
       <WhyChooseUs />
       <ArtOfCoziness />
