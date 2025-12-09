@@ -48,13 +48,17 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             {/* Logo */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center">
-                <span className="text-brand-dark text-xl font-bold">J</span>
+            <div className="mb-4">
+              <div className="relative h-12 w-auto">
+                <Image
+                  src="/logo.png"
+                  alt="JCL Services Logo"
+                  width={550}
+                  height={80}
+                  className="h-full w-auto object-contain"
+                  priority
+                />
               </div>
-              <span className="text-2xl font-bold text-brand-white">
-                JCL Services
-              </span>
             </div>
 
             {/* Description */}
