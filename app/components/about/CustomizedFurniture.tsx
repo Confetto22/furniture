@@ -82,14 +82,14 @@ export default function CustomizedFurniture() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Customized Furniture&apos;s
+            Customized Furniture
           </h2>
         </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column - Furniture Viewer */}
-          <div className="relative w-full rounded-lg overflow-hidden border border-brand-white/20 shadow-lg">
+          <div className="relative w-full aspect-square md:aspect-auto md:h-auto rounded-lg overflow-hidden border border-brand-white/20 shadow-lg">
             {/* Background Image */}
             <Image
               src={activeRoomData?.image || roomCategories[0].image}
@@ -97,6 +97,7 @@ export default function CustomizedFurniture() {
               fill
               className="object-cover"
               priority
+              loading="eager"
             />
           </div>
 
