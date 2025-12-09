@@ -112,7 +112,7 @@ export default function FAQ() {
             {/* Main Image */}
             <div className="relative w-full h-full max-h-[600px] rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765235690/jcl-furniture/pexels-fotios-photos-1957477_1_wjqnhw.jpg"
+                src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282630/jcl/image_1024_egukhs.jpg"
                 alt="Modern bedroom"
                 fill
                 className="object-cover"

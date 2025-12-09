@@ -48,7 +48,7 @@ const roomCategories: RoomCategory[] = [
     name: "Office",
     icon: <Briefcase className="w-8 h-8" />,
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282015/jcl/Screenshot_2025-12-09_at_11_50_54-Picsart-AiImageEnhancer_ttfwud.png",
   },
   {
     id: "bedroom",

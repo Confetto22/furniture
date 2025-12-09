@@ -56,10 +56,10 @@ const About = () => {
               {/* Bottom Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
-                  alt="Modern living and dining area"
+                  src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765283344/jcl/5b3fb63473475eac9e31f71c093ca224-1_gred6j.jpg"
+                  alt="modern office"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -69,10 +69,10 @@ const About = () => {
               {/* Top Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80"
-                  alt="Cozy modern living room"
+                  src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282941/jcl/product-jpeg_ehzhia.jpg"
+                  alt="modern office"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
 
