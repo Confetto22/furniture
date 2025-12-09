@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -40,24 +42,33 @@ export default function Hero() {
       <div className="content bg-brand-dark/70 min-h-screen flex items-center">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl text-white">
-            <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4">
+            <h3 className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4">
               30+ YEARS OF EXCELLENCE
-            </div>
-            <h1
+            </h3>
+            <motion.h1
+              initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+              whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: "easeOut",
+              }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg leading-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Professional Office
               <br />
               Furniture Solutions
-            </h1>
-            <p className="md:text-lg text-white/90 max-w-2xl mb-8 drop-shadow leading-relaxed">
+            </motion.h1>
+            <h2 className="md:text-lg text-white/90 max-w-2xl mb-8 drop-shadow leading-relaxed">
               Transform your workspace with our premium office furniture
               collection. Quality office furniture at affordable prices, backed
               by a 5-year warranty - the longest in Ghana. Experience
               exceptional service and craftsmanship that has served businesses
               for over three decades.
-            </p>
+            </h2>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg hover:bg-brand-gold/90 transition-colors font-semibold shadow-lg ">
                 Explore Office Furniture
