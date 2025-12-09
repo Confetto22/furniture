@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Instagram, Facebook, Youtube, Twitter, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const instagramImages = [
   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&q=80",
@@ -15,6 +16,28 @@ const instagramImages = [
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+const quickLinks = [
+  {
+    ref: "Home",
+    refLink: "/",
+  },
+  {
+    ref: "About",
+    refLink: "/about",
+  },
+  {
+    ref: "Collection",
+    refLink: "#",
+  },
+  {
+    ref: "Blog",
+    refLink: "#",
+  },
+  {
+    ref: "Contact us",
+    refLink: "/contact",
+  },
+];
 
 export default function Footer() {
   return (
@@ -79,11 +102,20 @@ export default function Footer() {
           {/* Quick Links Column */}
           <div>
             <h4 className="text-brand-white font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-brand-white/70">
-              <li>
-                <a href="/" className="hover:text-brand-gold transition-colors">
+            <menu className="space-y-2 text-sm text-brand-white/70">
+              {quickLinks.map((item) => (
+                <Link
+                  href={item.refLink}
+                  key={item.ref}
+                  className="hover:text-brand-gold transition-colors"
+                >
+                  {item.ref}
+                </Link>
+              ))}
+              {/* <li>
+                <Link href="/" className="hover:text-brand-gold transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -107,8 +139,8 @@ export default function Footer() {
                 <a href="#" className="hover:text-brand-gold transition-colors">
                   Contact Us
                 </a>
-              </li>
-            </ul>
+              </li> */}
+            </menu>
           </div>
 
           {/* Instagram Feed Column */}

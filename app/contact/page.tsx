@@ -107,7 +107,10 @@ const Contact = () => {
 
             {/* Main Office Location */}
             <Link
-              href={"#"}
+              href={
+                "https://www.google.com/maps/place/6CQXPQ2C%2B3H3/@5.7001428,-0.231153,17z/data=!3m1!4b1!4m4!3m3!8m2!3d5.7001375!4d-0.2285781?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+              }
+              target="_blank"
               className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-6 text-center hover:border-brand-gold/40 transition-colors"
             >
               <div className="w-14 h-14 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -1,5 +1,30 @@
 "use client";
 
+import Link from "next/link";
+
+const navItems = [
+  {
+    ref: "Home",
+    refLink: "/",
+  },
+  {
+    ref: "About",
+    refLink: "/about",
+  },
+  {
+    ref: "Collection",
+    refLink: "#",
+  },
+  {
+    ref: "Blog",
+    refLink: "#",
+  },
+  {
+    ref: "Contact us",
+    refLink: "/contact",
+  },
+];
+
 export default function Header() {
   return (
     <header className="w-full sticky top-0 z-50 bg-brand-white shadow-sm">
@@ -19,7 +44,16 @@ export default function Header() {
 
             {/* Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">
-              <a
+              {navItems.map((item) => (
+                <Link
+                  href={item.refLink}
+                  key={item.ref}
+                  className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium"
+                >
+                  {item.ref}
+                </Link>
+              ))}
+              {/* <a
                 href="/"
                 className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium"
               >
@@ -48,7 +82,7 @@ export default function Header() {
                 className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium"
               >
                 Contact us
-              </a>
+              </a> */}
             </div>
 
             {/* Right Side - Mobile Menu */}
