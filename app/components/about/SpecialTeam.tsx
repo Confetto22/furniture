@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface TeamMember {
   name: string;
   title: string;
@@ -7,6 +9,7 @@ interface TeamMember {
   bio?: string;
   experience?: string;
   qualifications?: string;
+  image?: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -14,6 +17,8 @@ const teamMembers: TeamMember[] = [
     name: "Robert Frimpong Ofori",
     title: "Managing Director",
     initials: "RF",
+    image:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.57_2_dbocmj.jpg",
     bio: "Established and ran this business for the past 18 years, facing challenges that would have scared any faint-hearted away.",
     experience: "18+ years",
     qualifications:
@@ -23,6 +28,8 @@ const teamMembers: TeamMember[] = [
     name: "Gideon Ofori Korankye",
     title: "General Manager",
     initials: "GK",
+    image:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.56_i0pjds.jpg",
     bio: "Strategic Planning Executive of the setup, advising on modern equipment and products from outside likely to be on request on the Ghanaian market.",
     experience: "Long-term strategic planning",
     qualifications:
@@ -32,6 +39,8 @@ const teamMembers: TeamMember[] = [
     name: "Anniversary Thomas Tehoda",
     title: "Administrator",
     initials: "AT",
+    image:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.57_rhmihp.jpg",
     bio: "Walk-in Administrator for the setup, has been in this position for the past 9 years.",
     experience: "9 years",
     qualifications:
@@ -41,19 +50,12 @@ const teamMembers: TeamMember[] = [
     name: "Janice Omari Frimpong Ofori",
     title: "Directress",
     initials: "JO",
+    image:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.57_1_jqocbd.jpg",
     bio: "Highly accomplished Civil Engineer responsible for Civil Works, Interior Décor, and Furniture Supply.",
     experience: "18+ years",
     qualifications:
       "Civil Engineer leading execution of interior finishing, space planning, décor installations, and tailored furniture solutions for residential, commercial, and institutional projects.",
-  },
-  {
-    name: "Emmanuel Obeng Yeboah",
-    title: "Civil Engineer",
-    initials: "EO",
-    bio: "Certified Civil Engineer with over a decade of experience in planning, supervision, and execution of infrastructure projects.",
-    experience: "10+ years",
-    qualifications:
-      "Bachelor's degree in Civil Engineering from KNUST. Registered member of Ghana Institution of Engineering (GhIE).",
   },
 ];
 
@@ -75,19 +77,31 @@ export default function SpecialTeam() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
           {teamMembers.map((member, index) => (
             <div
               key={index}
               className="bg-brand-dark rounded-lg overflow-hidden hover:border-brand-gold/40 transition-all border border-brand-white/10 shadow-md hover:shadow-lg"
             >
-              {/* Avatar with Initials */}
-              <div className="relative w-full aspect-square bg-brand-dark-light flex items-center justify-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-brand-gold flex items-center justify-center shadow-lg">
-                  <span className="text-brand-dark text-4xl md:text-5xl font-bold">
-                    {member.initials}
-                  </span>
-                </div>
+              {/* Member Image */}
+              <div className="relative w-full aspect-square overflow-hidden bg-brand-dark-light">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top hover:scale-110 transition-transform duration-500"
+                    priority={index < 2}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">
+                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-brand-gold flex items-center justify-center shadow-lg">
+                      <span className="text-brand-dark text-4xl md:text-5xl font-bold">
+                        {member.initials}
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Member Info */}

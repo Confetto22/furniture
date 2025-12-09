@@ -122,7 +122,7 @@ const About = () => {
       <CustomizedFurniture />
       <AboutStats />
       {/* <CustomizedFurniture /> */}
-      {/* <SpecialTeam /> */}
+      <SpecialTeam />
       {/* <CustomerTestimonials /> */}
       <Partners />
       <Representation />
