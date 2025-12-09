@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Instagram, Facebook, Youtube, Twitter, ArrowUp } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+
 import Link from "next/link";
 
 const instagramImages = [
@@ -38,6 +40,28 @@ const quickLinks = [
     refLink: "/contact",
   },
 ];
+const socials = [
+  {
+    refLink: "https://wa.me/233558598598",
+    icon: FaWhatsapp,
+    name: "whatsapp",
+  },
+  {
+    refLink: "https://www.instagram.com/jclservices.gh/?igsh=MWpmZjE4ZTVnYjFr",
+    icon: Instagram,
+    name: "instagram",
+  },
+  {
+    refLink: "#",
+    icon: Facebook,
+    name: "facebook",
+  },
+  {
+    refLink: "#",
+    icon: Youtube,
+    name: "youtube",
+  },
+];
 
 export default function Footer() {
   return (
@@ -70,43 +94,25 @@ export default function Footer() {
             </p>
 
             {/* Social Media Icons */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.instagram.com/jclservices.gh/?igsh=MWpmZjE4ZTVnYjFr#"
-                target="_blank"
-                className="text-brand-white/70 hover:text-brand-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-brand-white/70 hover:text-brand-gold transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-brand-white/70 hover:text-brand-gold transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-brand-white/70 hover:text-brand-gold transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
+            <menu className="flex items-center gap-4">
+              {socials.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.refLink}
+                  target="_blank"
+                  className="text-brand-white/70 hover:text-brand-gold transition-colors"
+                  aria-label="Instagram"
+                >
+                  <social.icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </menu>
           </div>
 
           {/* Quick Links Column */}
           <div>
             <h4 className="text-brand-white font-bold mb-4">Quick Links</h4>
-            <menu className="space-y-2 text-sm text-brand-white/70">
+            <menu className="space-y-2 text-sm text-brand-white/70 flex flex-col items-start">
               {quickLinks.map((item) => (
                 <Link
                   href={item.refLink}

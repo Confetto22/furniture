@@ -1,6 +1,10 @@
 "use client";
 
+import { Facebook, Instagram, Menu, X, Youtube } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const navItems = [
   {
@@ -22,6 +26,28 @@ const navItems = [
   {
     ref: "Contact us",
     refLink: "/contact",
+  },
+];
+const socials = [
+  {
+    refLink: "https://wa.me/233558598598",
+    icon: FaWhatsapp,
+    name: "whatsapp",
+  },
+  {
+    refLink: "https://www.instagram.com/jclservices.gh/?igsh=MWpmZjE4ZTVnYjFr",
+    icon: Instagram,
+    name: "instagram",
+  },
+  {
+    refLink: "#",
+    icon: Facebook,
+    name: "facebook",
+  },
+  {
+    refLink: "#",
+    icon: Youtube,
+    name: "youtube",
   },
 ];
 
@@ -80,6 +106,21 @@ export default function Header() {
                 </Link>
               ))}
             </div>
+
+            {/* Social Media Icons */}
+            <menu className="hidden md:flex items-center gap-4">
+              {socials.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.refLink}
+                  target="_blank"
+                  className="text-brand-dark hover:text-brand-gold transition-colors"
+                  aria-label="Instagram"
+                >
+                  <social.icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </menu>
 
             {/* Mobile Menu Button */}
             <div className="flex items-center lg:hidden">

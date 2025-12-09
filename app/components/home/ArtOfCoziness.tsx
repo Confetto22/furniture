@@ -62,7 +62,7 @@ export default function ArtOfCoziness() {
         </div>
 
         {/* Category Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Large Card - Living Room (Left Column) */}
           <div className="">
             <CategoryCard
@@ -102,20 +102,6 @@ export default function ArtOfCoziness() {
               ))}
             </div>
           </div>
-
-          {/* 2 cards */}
-          {/* <div className="flex flex-col gap-6">
-            {categories.slice(2).map((category, index) => (
-              <div key={index} className="h-[200px] md:h-[240px] lg:h-[250px]">
-                <CategoryCard
-                  name={category.name}
-                  priceRange={category.priceRange}
-                  image={category.image}
-                  isLarge={false}
-                />
-              </div>
-            ))}
-          </div> */}
         </div>
       </div>
     </section>

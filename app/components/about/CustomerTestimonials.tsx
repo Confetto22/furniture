@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./CustomerTestimonials.css";
@@ -107,21 +107,27 @@ export default function CustomerTestimonials() {
         </div>
 
         {/* Swiper Container */}
-        <div className="max-w-6xl mx-auto relative">
+        <div className="w-full mx-auto relative">
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={0}
             slidesPerView={1}
+            speed={1400}
+            autoplay={{
+              delay: 5000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
             navigation={{
               nextEl: ".customer-testimonials-next",
               prevEl: ".customer-testimonials-prev",
             }}
             loop={true}
-            className="customer-testimonials-swiper"
+            className="customer-testimonials-swiper "
           >
             {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="text-center px-4 md:px-8">
+              <SwiperSlide key={index} className="">
+                <div className="text-center  md:px-8 px-8">
                   {/* Star Rating */}
                   <div className="mb-6">
                     <StarRating rating={testimonial.rating} />

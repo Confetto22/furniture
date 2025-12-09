@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full min-h-[40vh] overflow-hidden">
-      <div className="bg-[url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80')] bg-cover bg-center w-full min-h-[60vh] ">
-        <div className="content min-h-[60vh] bg-brand-dark/80 flex flex-col items-center justify-center w-full h-full">
+    <section className="relative w-full  overflow-hidden">
+      <div className="bg-[url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80')] bg-cover bg-center w-full md:min-h-[60vh] min-h-[40vh]">
+        <div className="content text-center md:min-h-[60vh] min-h-[40vh] bg-brand-dark/80 flex flex-col items-center justify-center w-full h-full">
           {/* Main Title */}
           <h1
             className="text-5xl md:text-6xl lg:text-7xl text-brand-white mb-4 drop-shadow-lg"

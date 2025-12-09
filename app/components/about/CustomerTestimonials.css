@@ -45,6 +45,6 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .customer-testimonials-swiper {
-    padding: 0 50px;
+    padding: 0;
   }
 }

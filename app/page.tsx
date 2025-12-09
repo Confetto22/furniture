@@ -70,7 +70,7 @@ export default function Home() {
             </div>
 
             {/* Right Column */}
-            <div className="space-y-8">
+            <div className="space-y-8 gap-7 grid">
               {/* Top Section - Image */}
               <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
                 <Image
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
 
               {/* Bottom Section - Text Content */}
-              <div className="space-y-6">
+              <div className="space-y-6 order-first md:order-last">
                 {/* Subtitle */}
                 <h3 className="text-3xl md:text-4xl font-bold text-brand-white">
                   Quality & Affordability Combined
