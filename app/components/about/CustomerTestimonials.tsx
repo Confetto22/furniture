@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -12,36 +11,50 @@ interface Testimonial {
   name: string;
   location: string;
   text: string;
-  avatar: string;
   rating: number;
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: "Rossana Isabella",
-    location: "China",
-    text: "The quality of furniture I received exceeded my expectations. The craftsmanship is exceptional, and the pieces have transformed my living space into a beautiful, comfortable home. The customer service was outstanding throughout the entire process.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
-    rating: 4.5,
-  },
-  {
-    name: "Sarah Johnson",
-    location: "United States",
-    text: "I've been working with JCL Services for over two years now, and I'm consistently impressed by their collection. The furniture is not only stylish but also incredibly durable. Their attention to detail and commitment to quality makes them my go-to furniture provider.",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+    name: "Kwame Asante",
+    location: "Accra, Ghana",
+    text: "JCL Services has been our trusted partner for office furniture for over 5 years. Their 5-year warranty gives us confidence, and the quality of their office furniture is exceptional. We've furnished our entire office building with their products, and everything has held up perfectly. Their competitive pricing and excellent customer service make them our go-to supplier.",
     rating: 5,
   },
   {
-    name: "Michael Chen",
-    location: "Singapore",
-    text: "The delivery was prompt and professional, and the furniture arrived in perfect condition. The design perfectly matches my modern aesthetic, and I've received countless compliments from guests. Highly recommend JCL Services for anyone looking for premium furniture.",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    name: "Ama Mensah",
+    location: "Kumasi, Ghana",
+    text: "As a business owner, I needed office furniture that would last. JCL Services delivered exactly that. The quality is outstanding, and their prices are very competitive. What impressed me most was their willingness to negotiate and work within our budget. The 5-year warranty is unmatched in Ghana, and their after-sales support has been excellent.",
+    rating: 5,
+  },
+  {
+    name: "Kofi Adjei",
+    location: "Tema, Ghana",
+    text: "We've been working with JCL Services for our office equipment needs for the past 3 years. Their range of office furniture, computers, and accessories is comprehensive. The delivery was always on time, and their team is professional. The durability of their furniture is remarkable - we haven't had any issues. Highly recommend them to any business in Ghana.",
+    rating: 5,
+  },
+  {
+    name: "Akosua Boateng",
+    location: "Accra, Ghana",
+    text: "JCL Services transformed our workspace with their premium office furniture. The quality is evident in every piece, and their custom design service helped us create exactly what we needed. Their 30+ years of experience shows in their professionalism and product knowledge. The 5-year warranty gives us peace of mind, and their prices are very reasonable.",
     rating: 4.5,
   },
+  {
+    name: "Yaw Owusu",
+    location: "Takoradi, Ghana",
+    text: "I've purchased office furniture from JCL Services for multiple projects, and I'm always satisfied. Their products are quality incarnate as they claim - durable, well-crafted, and affordably priced. The team is knowledgeable and helps you find the right solutions for your needs. Their payment terms are flexible, which helps with cash flow management.",
+    rating: 5,
+  },
 ];
+
+// Helper function to get initials from name
+function getInitials(name: string): string {
+  const parts = name.trim().split(" ");
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  return name.substring(0, 2).toUpperCase();
+}
 
 function StarRating({ rating }: { rating: number }) {
   const fullStars = Math.floor(rating);
@@ -121,18 +134,15 @@ export default function CustomerTestimonials() {
 
                   {/* Customer Info */}
                   <div className="flex flex-col items-center">
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4 ring-2 ring-brand-gold/30">
-                      <Image
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
+                    <div className="w-20 h-20 rounded-full bg-brand-gold flex items-center justify-center mb-4 ring-2 ring-brand-gold/30 shadow-lg">
+                      <span className="text-brand-dark text-2xl font-bold">
+                        {getInitials(testimonial.name)}
+                      </span>
                     </div>
                     <h3 className="text-brand-white text-xl md:text-2xl font-semibold mb-1">
                       {testimonial.name}
                     </h3>
-                    <p className="text-brand-white/70 text-sm md:text-base">
+                    <p className="text-brand-gold text-sm md:text-base font-medium">
                       {testimonial.location}
                     </p>
                   </div>
