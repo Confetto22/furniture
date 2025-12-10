@@ -113,10 +113,13 @@ export default function ShopByCategory() {
             {categories.map((category) => {
               const isHovered = hoveredCategory?.id === category.id;
               return (
-                <div
+                <button
                   key={category.id}
-                  className="relative py-6 border-b border-brand-white/10 last:border-b-0 cursor-pointer group"
+                  type="button"
+                  className="relative py-6 border-b border-brand-white/10 last:border-b-0 cursor-pointer group w-full text-left"
                   onMouseEnter={() => setHoveredCategory(category)}
+                  aria-label={`View ${category.name} furniture category - ${category.itemCount} items available`}
+                  aria-pressed={hoveredCategory?.id === category.id}
                 >
                   <div className="flex items-center justify-between">
                     {/* Number and Name */}
@@ -147,9 +150,10 @@ export default function ShopByCategory() {
                         isHovered ? "text-brand-gold scale-110" : ""
                       }`}
                       size={20}
+                      aria-hidden="true"
                     />
                   </div>
-                </div>
+                </button>
               );
             })}
           </div>
@@ -159,10 +163,10 @@ export default function ShopByCategory() {
             {/* Background Image */}
             <Image
               src={activeCategory.image}
-              alt={activeCategory.name}
+              alt={`${activeCategory.title} - ${activeCategory.name} furniture collection from JCL Services Ghana`}
               fill
               className="object-cover transition-opacity duration-500"
-              priority
+              loading="lazy"
             />
 
             {/* Overlay Card */}

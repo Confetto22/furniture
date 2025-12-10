@@ -145,7 +145,7 @@ function ProductCard({ product }: { product: Product }) {
         >
           <Image
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} - ${product.category} office furniture from JCL Services Ghana, priced from ${product.price}`}
             priority
             loading="eager"
             fill
@@ -160,9 +160,10 @@ function ProductCard({ product }: { product: Product }) {
         >
           <Image
             src={product.hoverImage}
-            alt={product.name}
+            alt={`${product.name} alternative view - premium office furniture from JCL Services`}
             fill
             className="object-cover"
+            loading="lazy"
           />
         </div>
 

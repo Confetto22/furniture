@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Briefcase,
   Printer,
@@ -78,7 +79,14 @@ export default function Services() {
           </h2>
           <p className="text-brand-white/80 text-base md:text-lg max-w-2xl mx-auto mt-4">
             Comprehensive business solutions to meet all your office and
-            workspace needs
+            workspace needs.{" "}
+            <Link
+              href="/contact"
+              className="text-brand-gold hover:text-brand-gold/80 underline transition-colors"
+            >
+              Get in touch with JCL Services
+            </Link>{" "}
+            to discuss your requirements.
           </p>
         </div>
 

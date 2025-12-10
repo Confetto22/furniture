@@ -88,10 +88,11 @@ export default function SpecialTeam() {
                 {member.image ? (
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name} - ${member.title} at JCL Services Limited`}
                     fill
                     className="object-cover object-top hover:scale-110 transition-transform duration-500"
                     priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">

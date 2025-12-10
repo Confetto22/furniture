@@ -56,9 +56,12 @@ export default function ArtOfCoziness() {
               Art Of Coziness
             </h2>
           </div>
-          <button className="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0 font-semibold">
+          <button
+            className="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0 font-semibold"
+            aria-label="Discover more office furniture collections from JCL Services"
+          >
             <span>Discover More</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -135,7 +138,7 @@ function CategoryCard({
       >
         <Image
           src={image}
-          alt={name}
+          alt={`${name} furniture collection from JCL Services - premium office furniture solutions in Ghana starting from ${priceRange}`}
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />

@@ -58,9 +58,12 @@ export default function Blog() {
               Visit Our Blog
             </h2>
           </div>
-          <button className="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0 font-semibold">
+          <button
+            className="bg-brand-gold hover:bg-brand-gold/90 text-brand-dark px-6 py-3 rounded-full flex items-center gap-2 transition-colors shadow-lg mx-auto sm:mx-0 font-semibold"
+            aria-label="View all blog posts about office furniture and workspace solutions"
+          >
             <span>View All Blogs</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -75,9 +78,10 @@ export default function Blog() {
               <div className="relative h-[250px] md:h-[280px] overflow-hidden">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={`${post.title} - Office furniture blog post from JCL Services`}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  loading="lazy"
                 />
               </div>
 

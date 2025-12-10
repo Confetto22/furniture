@@ -22,10 +22,10 @@ export default function AboutStats() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80"
-          alt="Modern interior background"
+          alt="JCL Services statistics background - 30+ years of excellence in office furniture solutions in Ghana"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
         />
       </div>
 

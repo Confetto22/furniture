@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Alternate = ({}) => {
   const bullets = [
@@ -52,7 +53,14 @@ const Alternate = ({}) => {
                 workspace solutions to businesses across Ghana. Our
                 comprehensive range includes office furniture, computer
                 accessories, stationery, and printing materials - all at
-                competitive and negotiable prices.
+                competitive and negotiable prices.{" "}
+                <Link
+                  href="/about"
+                  className="text-brand-gold hover:text-brand-gold/80 underline transition-colors"
+                >
+                  Learn more about our 30+ years of experience
+                </Link>
+                .
               </p>
             </motion.div>
 
@@ -71,7 +79,7 @@ const Alternate = ({}) => {
             >
               <Image
                 src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1765230717/jcl-furniture/3d-rendering-business-meeting-working-room-office-building_qyd4z2.jpg"
-                alt="Modern living and dining area"
+                alt="Modern office workspace with professional furniture and meeting room setup in Accra, Ghana"
                 fill
                 priority
                 loading="eager"
@@ -99,7 +107,7 @@ const Alternate = ({}) => {
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282941/jcl/product-jpeg_ehzhia.jpg"
                 priority
                 loading="eager"
-                alt="Cozy modern living room"
+                alt="Premium office furniture collection showcasing quality workspace solutions from JCL Services in Ghana"
                 fill
                 className="object-cover"
               />

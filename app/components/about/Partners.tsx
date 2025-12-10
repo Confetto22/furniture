@@ -54,9 +54,10 @@ export default function Partners() {
               >
                 <Image
                   src={partner.image}
-                  alt={partner.name}
+                  alt={`${partner.name} - International partner of JCL Services for office furniture in Ghana`}
                   fill
                   className="object-cover transition-transform duration-500"
+                  loading="lazy"
                 />
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-brand-dark/80"></div>

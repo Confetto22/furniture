@@ -166,9 +166,12 @@ export default function Footer() {
                 >
                   <Image
                     src={image}
-                    alt={`Instagram post ${index + 1}`}
+                    alt={`JCL Services Instagram post ${
+                      index + 1
+                    } - Office furniture and workspace solutions`}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
               ))}

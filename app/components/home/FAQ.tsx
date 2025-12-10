@@ -113,7 +113,7 @@ export default function FAQ() {
             <div className="relative w-full h-full max-h-[600px] rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282630/jcl/image_1024_egukhs.jpg"
-                alt="Modern bedroom"
+                alt="JCL Services office furniture showroom - quality workspace solutions with 5-year warranty in Ghana"
                 fill
                 className="object-cover"
                 priority

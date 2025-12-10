@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -92,12 +93,20 @@ export default function Hero() {
               for over three decades.
             </motion.h2>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg hover:bg-brand-gold/90 transition-colors font-semibold shadow-lg ">
-                Explore Office Furniture
-              </button>
-              <button className="bg-transparent border-2 border-brand-gold text-brand-gold px-8 py-4 rounded-lg hover:bg-brand-gold/10 transition-colors font-semibold ">
-                View Our Services
-              </button>
+              <Link
+                href="/about"
+                className="bg-brand-gold text-brand-dark px-8 py-4 rounded-lg hover:bg-brand-gold/90 transition-colors font-semibold shadow-lg text-center"
+                aria-label="Learn more about JCL Services 30+ years of experience in office furniture"
+              >
+                Learn More About Our 30+ Years Experience
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-transparent border-2 border-brand-gold text-brand-gold px-8 py-4 rounded-lg hover:bg-brand-gold/10 transition-colors font-semibold text-center"
+                aria-label="Contact JCL Services for office furniture solutions"
+              >
+                Contact JCL Services
+              </Link>
             </div>
           </div>
         </div>

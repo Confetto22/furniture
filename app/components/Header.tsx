@@ -95,17 +95,21 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation Links - Centered */}
-            <div className="hidden lg:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+            <nav
+              className="hidden lg:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2"
+              aria-label="Main navigation"
+            >
               {navigationLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium"
+                  aria-label={`Navigate to ${link.label} page`}
                 >
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </nav>
 
             {/* Mobile Menu Button */}
             <div className="flex items-center lg:hidden">
@@ -142,13 +146,17 @@ export default function Header() {
             }`}
           >
             <div className="container  mx-auto px-4 py-6">
-              <nav className="flex flex-col space-y-4">
+              <nav
+                className="flex flex-col space-y-4"
+                aria-label="Mobile navigation"
+              >
                 {navigationLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={closeMobileMenu}
                     className="text-brand-dark/80 hover:text-brand-gold transition-colors font-medium py-3 px-4 rounded-lg hover:bg-brand-gold/10 text-lg"
+                    aria-label={`Navigate to ${link.label} page`}
                   >
                     {link.label}
                   </Link>

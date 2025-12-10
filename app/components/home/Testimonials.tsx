@@ -101,9 +101,10 @@ export default function Testimonials() {
                   <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
                     <Image
                       src={testimonial.avatar}
-                      alt={testimonial.name}
+                      alt={`${testimonial.name} testimonial background`}
                       fill
                       className="object-cover rounded-full"
+                      loading="lazy"
                     />
                   </div>
                   <div className="relative z-10">
@@ -111,9 +112,10 @@ export default function Testimonials() {
                       <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-brand-gold/30">
                         <Image
                           src={testimonial.avatar}
-                          alt={testimonial.name}
+                          alt={`${testimonial.name} - Customer testimonial for JCL Services office furniture`}
                           fill
                           className="object-cover"
+                          loading="lazy"
                         />
                       </div>
                       <div>

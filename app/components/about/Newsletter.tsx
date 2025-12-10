@@ -19,10 +19,10 @@ export default function Newsletter() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1920&q=80"
-          alt="Interior background"
+          alt="JCL Services office furniture newsletter background - subscribe for updates on workspace solutions in Ghana"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
         />
         {/* Warm lighting gradient from top-center */}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-gold/20 via-transparent to-brand-dark/90"></div>
@@ -57,9 +57,11 @@ export default function Newsletter() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your mail id here"
+                placeholder="Enter your email address"
                 className="flex-1 max-w-md w-full px-6 py-4 bg-brand-dark/90 border-2 border-brand-gold rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all"
                 required
+                aria-label="Email address for newsletter subscription"
+                aria-required="true"
               />
 
               {/* Submit Button */}

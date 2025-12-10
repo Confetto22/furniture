@@ -93,7 +93,9 @@ export default function CustomizedFurniture() {
             {/* Background Image */}
             <Image
               src={activeRoomData?.image || roomCategories[0].image}
-              alt={activeRoomData?.name || "Furniture view"}
+              alt={`Customized ${
+                activeRoomData?.name || "office"
+              } furniture solutions from JCL Services - quality office furniture in Ghana`}
               fill
               className="object-cover"
               priority
@@ -114,6 +116,8 @@ export default function CustomizedFurniture() {
                       ? "bg-brand-gold border-brand-gold text-brand-dark shadow-lg"
                       : "bg-brand-dark border-brand-white/20 text-brand-white hover:border-brand-gold/40 hover:bg-brand-dark/80"
                   }`}
+                  aria-label={`View ${room.name} furniture collection`}
+                  aria-pressed={isActive}
                 >
                   <div className="mb-3">{room.icon}</div>
                   <span className="text-sm md:text-base font-medium text-center">

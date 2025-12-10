@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutAlternate = () => {
   const bullets = [
@@ -72,7 +73,7 @@ const AboutAlternate = () => {
             >
               <Image
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765283344/jcl/5b3fb63473475eac9e31f71c093ca224-1_gred6j.jpg"
-                alt="modern office"
+                alt="JCL Services office furniture showroom displaying professional workspace solutions in Accra, Ghana"
                 fill
                 className="object-contain"
               />
@@ -96,9 +97,10 @@ const AboutAlternate = () => {
             >
               <Image
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282941/jcl/product-jpeg_ehzhia.jpg"
-                alt="modern office"
+                alt="Quality office furniture and business solutions from JCL Services Limited, established 1993 in Ghana"
                 fill
                 className="object-contain"
+                loading="lazy"
               />
             </motion.div>
 
@@ -126,7 +128,14 @@ const AboutAlternate = () => {
                 comprehensive range of services including office furniture
                 dealership, stationery and printing materials, computer
                 accessories, electronic appliances, civil and electrical
-                engineering services, and import/export operations.
+                engineering services, and import/export operations.{" "}
+                <Link
+                  href="/contact"
+                  className="text-brand-gold hover:text-brand-gold/80 underline transition-colors"
+                >
+                  Contact us to learn more about our services
+                </Link>
+                .
               </motion.p>
 
               {/* Bullet Points */}
