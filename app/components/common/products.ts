@@ -20,7 +20,7 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765455422/jcl-furniture/KCA-N700A1STG_n9y3he.jpg",
   },
   {
-    name: "83-KBBT16B executive office desk",
+    name: "black leather two-seater sofa",
     price: "$ 88.20",
     priceRange: "$ 146.40",
     image:
@@ -48,7 +48,7 @@ export const products: Product[] = [
       "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765455446/jcl-furniture/KCA-V700R15STG_hui_whnjdt.jpg",
   },
   {
-    name: " Virgil Collection black faux leather armchair",
+    name: "Enzo modern club chair",
     price: "$ 88.20",
     priceRange: "$ 146.40",
     image:

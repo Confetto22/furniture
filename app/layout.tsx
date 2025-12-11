@@ -171,10 +171,10 @@ export default function RootLayout({
         <Link
           href={"https://wa.me/233558598598"}
           target="_blank"
-          className="size-16 bg-[#4eca5c] rounded-full flex items-center justify-center hover:bg-[#1b6123] transition-colors group fixed bottom-6 left-3 text-white cursor-pointer"
+          className="size-14 md:size-16 bg-[#4eca5c] rounded-full flex items-center justify-center hover:bg-[#1b6123] transition-colors group fixed bottom-6 right-3 text-white cursor-pointer"
           aria-label="Scroll to top"
         >
-          <FaWhatsapp size={34} />
+          <FaWhatsapp size={33} />
         </Link>
       </body>
     </html>
