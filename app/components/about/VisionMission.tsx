@@ -49,13 +49,13 @@ export default function VisionMission() {
                 <card.icon className="w-8 h-8 text-brand-gold" />
               </div>
               <motion.h3
-                initial={{ opacity: 0, x: -30, filter: "blur(8px)" }}
+                initial={{ opacity: 0, x: -30, filter: "blur(4px)" }}
                 whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-2xl md:text-3xl font-bold text-brand-white mb-4"
@@ -63,13 +63,13 @@ export default function VisionMission() {
                 {card.title}
               </motion.h3>
               <motion.p
-                initial={{ opacity: 0, x: 30, filter: "blur(8px)" }}
+                initial={{ opacity: 0, x: 30, filter: "blur(4px)" }}
                 whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-brand-white/80 text-base leading-relaxed"

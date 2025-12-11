@@ -45,13 +45,13 @@ export default function Representation() {
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             <motion.p
-              initial={{ opacity: 0, x: -30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, x: -30, filter: "blur(4px)" }}
               whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="text-brand-white/80 text-base md:text-lg leading-relaxed"
@@ -62,13 +62,13 @@ export default function Representation() {
               affordably priced for every pocket in Ghana.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, x: 30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, x: 30, filter: "blur(4px)" }}
               whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="text-brand-white/80 text-base md:text-lg leading-relaxed"
@@ -84,13 +84,13 @@ export default function Representation() {
               market.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, x: -30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, x: -30, filter: "blur(4px)" }}
               whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="text-brand-white/80 text-base md:text-lg leading-relaxed"
@@ -106,13 +106,13 @@ export default function Representation() {
           <div className="space-y-6">
             {featureCards.map((card) => (
               <motion.div
-                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 key={card.title}
@@ -140,7 +140,7 @@ export default function Representation() {
         <div className="bg-brand-dark-light border border-brand-gold/20 rounded-lg p-6 text-center">
           <p className="text-brand-white/80 text-base md:text-lg">
             Brochures of our proud designs of furniture are always incorporated
-            in our profile for customers' own judgment.
+            in our profile for customers&apos; own judgment.
           </p>
         </div>
       </div>

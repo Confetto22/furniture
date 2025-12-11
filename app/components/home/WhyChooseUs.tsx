@@ -81,13 +81,13 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <motion.div
-              initial={{ filter: "blur(8px)" }}
+              initial={{ filter: "blur(4px)" }}
               whileInView={{ filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               key={index}
@@ -97,13 +97,13 @@ export default function WhyChooseUs() {
                 <div className="text-brand-gold">{feature.icon}</div>
               </div>
               <motion.h3
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-xl md:text-2xl font-bold text-brand-white mb-3"
@@ -111,13 +111,13 @@ export default function WhyChooseUs() {
                 {feature.title}
               </motion.h3>
               <motion.p
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-brand-white/70 text-sm md:text-base leading-relaxed"

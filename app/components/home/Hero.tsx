@@ -44,13 +44,13 @@ export default function Hero() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl text-white">
             <motion.h3
-              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
               transition={{
                 duration: 0.8,
-                delay: 0.2,
+
                 ease: "easeOut",
               }}
               className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-4"
@@ -58,13 +58,13 @@ export default function Hero() {
               30+ YEARS OF EXCELLENCE
             </motion.h3>
             <motion.h1
-              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
               transition={{
                 duration: 0.8,
-                delay: 0.2,
+
                 ease: "easeOut",
               }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg leading-tight"
@@ -75,13 +75,13 @@ export default function Hero() {
               Furniture Solutions
             </motion.h1>
             <motion.h2
-              initial={{ opacity: 0, x: 30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, x: 30, filter: "blur(4px)" }}
               whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
               transition={{
                 duration: 0.8,
-                delay: 0.2,
+
                 ease: "easeOut",
               }}
               className="md:text-lg text-white/90 max-w-2xl mb-8 drop-shadow leading-relaxed"

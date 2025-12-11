@@ -20,13 +20,13 @@ const AboutAlternate = () => {
           <div className="space-y-8">
             {/* Top Section - Text Content */}
             <motion.div
-              initial={{ opacity: 0, x: 30, filter: "blur(8px)" }}
+              initial={{ opacity: 0, x: 30, filter: "blur(4px)" }}
               whileInView={{ x: 0, opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, x: -30, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="space-y-6"
@@ -60,13 +60,13 @@ const AboutAlternate = () => {
 
             {/* Bottom Section - Image */}
             <motion.div
-              initial={{ opacity: 0, filter: "blur(8px)" }}
+              initial={{ opacity: 0, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden shadow-lg"
@@ -84,13 +84,13 @@ const AboutAlternate = () => {
           <div className="space-y-8 grid">
             {/* Top Section - Image */}
             <motion.div
-              initial={{ opacity: 0, filter: "blur(8px)" }}
+              initial={{ opacity: 0, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ opacity: 0, filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden shadow-lg"
@@ -113,13 +113,13 @@ const AboutAlternate = () => {
 
               {/* Paragraph */}
               <motion.p
-                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-brand-white/80 text-base md:text-lg leading-relaxed"
@@ -142,13 +142,14 @@ const AboutAlternate = () => {
               <ul className="space-y-4">
                 {bullets.map((bullet) => (
                   <motion.li
-                    initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+                    key={bullet}
+                    initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
                     whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                     viewport={{ once: true }}
                     exit={{ opacity: 0, y: -30, filter: "blur(5px)" }}
                     transition={{
-                      duration: 0.8,
-                      delay: 0.2,
+                      duration: 0.6,
+                      delay: 0.1,
                       ease: "easeOut",
                     }}
                     className="flex items-start gap-3"

@@ -94,13 +94,13 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
-              initial={{ filter: "blur(8px)" }}
+              initial={{ filter: "blur(4px)" }}
               whileInView={{ filter: "blur(0px)" }}
               viewport={{ once: true }}
               exit={{ filter: "blur(5px)" }}
               transition={{
-                duration: 0.8,
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.1,
                 ease: "easeOut",
               }}
               key={index}
@@ -110,13 +110,13 @@ export default function Services() {
                 <div className="text-brand-gold">{service.icon}</div>
               </div>
               <motion.h3
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-xl font-bold text-brand-white mb-2"
@@ -124,13 +124,13 @@ export default function Services() {
                 {service.name}
               </motion.h3>
               <motion.p
-                initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
                 whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true }}
                 exit={{ opacity: 0, y: -20, filter: "blur(5px)" }}
                 transition={{
-                  duration: 0.8,
-                  delay: 0.2,
+                  duration: 0.6,
+                  delay: 0.1,
                   ease: "easeOut",
                 }}
                 className="text-brand-white/70 text-sm leading-relaxed"

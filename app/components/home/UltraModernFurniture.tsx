@@ -3,16 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Sofa, Briefcase, Sprout } from "lucide-react";
-
-interface Product {
-  name: string;
-  category: string;
-  price: string;
-  priceRange: string;
-  image: string;
-  hoverImage: string;
-  filter: string;
-}
+import { products, type Product } from "../common/products";
 
 // interface Category {
 //   id: string;
@@ -38,31 +29,6 @@ interface Product {
 //   },
 // ];
 
-const products: Product[] = [
-  {
-    name: "Soft Seater Chair",
-    category: "OFFICE DECORATION",
-    filter: "office",
-    price: "$ 108.95",
-    priceRange: "$ 123.50",
-    image:
-      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765296590/jcl/office-desktop-with-swivel-chair_bx4nag.webp",
-    hoverImage:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228712/jcl-furniture/Picture35_zjxiu5.jpg",
-  },
-  {
-    name: "Elegant Wooden Table",
-    category: "HOME DECORATION, OUTDOOR DECORATION",
-    filter: "office",
-    price: "$ 88.20",
-    priceRange: "$ 146.40",
-    image:
-      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282630/jcl/image_1024_egukhs.jpg",
-    hoverImage:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765228705/jcl-furniture/Picture3_is0q2u.png",
-  },
-];
-
 export default function UltraModernFurniture() {
   // const [activeCategory, setActiveCategory] = useState<string>("office");
   // const displayProducts = products.filter(
@@ -81,7 +47,7 @@ export default function UltraModernFurniture() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-white"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Ultra-Modern Furniture&apos;s
+            Ultra-Modern Furniture
           </h2>
         </div>
 
@@ -127,43 +93,25 @@ export default function UltraModernFurniture() {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       className="w-full rounded-lg h-full overflow-hidden bg-brand-white border border-brand-dark-light group cursor-pointer transition-shadow"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image Container */}
       <div className="relative h-[300px] md:h-[350px] overflow-hidden">
         {/* Default Image */}
-        <div
-          className={` inset-0 transition-opacity duration-500 ${
-            isHovered ? "opacity-0" : "opacity-100"
-          }`}
-        >
+        <div className={` inset-0 transition-opacity duration-500 `}>
           <Image
             src={product.image}
-            alt={`${product.name} - ${product.category} office furniture from JCL Services Ghana, priced from ${product.price}`}
+            alt={`${product.name}  office furniture from JCL Services Ghana, priced from ${product.price}`}
             priority
             loading="eager"
             fill
-            className="object-cover"
-          />
-        </div>
-        {/* Hover Image */}
-        <div
-          className={`inset-0 transition-opacity duration-500 ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={product.hoverImage}
-            alt={`${product.name} alternative view - premium office furniture from JCL Services`}
-            fill
-            className="object-cover"
-            loading="lazy"
+            className="object-cover group-hover:scale-105 transition-all duration-300 ease-in"
           />
         </div>
 
@@ -174,11 +122,8 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Product Info */}
-      <div className="p-6 flex flex-col items-center h-fit overflow-hidden justify-center text-center">
-        <p className="text-brand-gold text-[.7rem] uppercase tracking-wider mb-2 font-semibold">
-          {product.category}
-        </p>
-        <h3 className="text-xl font-bold text-brand-dark mb-3">
+      <div className="px-3 py-2 flex flex-col items-center h-fit overflow-hidden justify-center text-center">
+        <h3 className="text-[1.1rem] capitalize font-bold text-brand-dark mb-3">
           {product.name}
         </h3>
         <p className="text-brand-dark/70 text-base">
