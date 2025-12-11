@@ -24,7 +24,7 @@ export const products: Product[] = [
     price: "$ 88.20",
     priceRange: "$ 146.40",
     image:
-      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282630/jcl/image_1024_egukhs.jpg",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1765455451/jcl-furniture/W515-3_s2w6zx.jpg",
   },
   {
     name: "high-back ergonomic office chair",

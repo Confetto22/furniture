@@ -79,7 +79,7 @@ export default function UltraModernFurniture() {
         </div> */}
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center lg:grid-cols-4 gap-3 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center xl:grid-cols-4 gap-3 ">
           {/* {products.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))} */}
@@ -97,12 +97,12 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
-      className="w-full h-full max-w-[350px] md:max-h-[350px] rounded-lg overflow-hidden bg-brand-white border border-brand-dark-light group cursor-pointer transition-shadow"
+      className="w-full h-full max-w-[450px] max-h-[550px] rounded-lg overflow-hidden bg-brand-white border border-brand-dark-light group cursor-pointer transition-shadow flex flex-col"
       // onMouseEnter={() => setIsHovered(true)}
       // onMouseLeave={() => setIsHovered(false)}
     >
       {/* Image Container */}
-      <div className="relative w-full max-w-[350px] overflow-hidden">
+      <div className="relative w-full h-full max-w-[450px] overflow-hidden flex-1">
         {/* Default Image */}
         <div className={` inset-0 transition-opacity duration-500 `}>
           <Image
@@ -112,7 +112,7 @@ function ProductCard({ product }: { product: Product }) {
             loading="eager"
             width={500}
             height={500}
-            className="object-cover md:object-auto object-center h-full group-hover:scale-105 transition-all duration-300 ease-in"
+            className="object-cover object-top md:object-cover md:object-center h-full w-full group-hover:scale-105 transition-all duration-300 ease-in"
           />
         </div>
 
@@ -123,7 +123,7 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Product Info */}
-      <div className="px-3 py-2 flex flex-col items-center h-fit overflow-hidden justify-center text-center mb-auto">
+      <div className="px-3 py-6 flex flex-col items-center justify-center text-center mt-auto">
         <h3 className="text-[1.1rem] capitalize font-bold text-brand-dark mb-3">
           {product.name}
         </h3>
