@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import StructuredData from "./components/seo/StructuredData";
 import { ArrowUp } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -167,12 +168,14 @@ export default function RootLayout({
         {children}
         <Footer />
         {/* Scroll to Top Button */}
-        <button
+        <Link
+          href={"https://wa.me/233558598598"}
+          target="_blank"
           className="size-16 bg-[#4eca5c] rounded-full flex items-center justify-center hover:bg-[#1b6123] transition-colors group fixed bottom-6 left-3 text-white cursor-pointer"
           aria-label="Scroll to top"
         >
           <FaWhatsapp size={34} />
-        </button>
+        </Link>
       </body>
     </html>
   );
