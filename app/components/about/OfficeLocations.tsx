@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 export default function OfficeLocations() {
   return (
     <section className="bg-brand-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
@@ -24,7 +24,7 @@ export default function OfficeLocations() {
         </div>
 
         {/* Locations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Main Office */}
           <div className="bg-brand-dark-light border border-brand-white/10 rounded-lg p-8 hover:border-brand-gold/40 transition-all shadow-md hover:shadow-lg">
             <div className="flex items-center gap-4 mb-6">

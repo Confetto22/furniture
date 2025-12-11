@@ -44,9 +44,9 @@ const blogPosts: BlogPost[] = [
 export default function Blog() {
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 md:mb-16 gap-6">
+        <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between mb-12 md:mb-16 gap-6">
           <div>
             <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-2">
               GET THE LATEST NEWS
@@ -68,7 +68,7 @@ export default function Blog() {
         </div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {blogPosts.map((post, index) => (
             <article
               key={index}
@@ -96,12 +96,12 @@ export default function Blog() {
                 </p>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold text-brand-white mb-3 leading-tight">
+                <h3 className="text-xl line-clamp-1 md:line-clamp-none md:text-2xl font-bold text-brand-white mb-3 leading-tight">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-brand-white/70 text-sm md:text-base leading-relaxed mb-4">
+                <p className="text-brand-white/70 line-clamp-2 md:line-clamp-none text-sm md:text-base leading-relaxed mb-4">
                   {post.excerpt}
                 </p>
 

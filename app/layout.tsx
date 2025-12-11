@@ -9,6 +9,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import StructuredData from "./components/seo/StructuredData";
+import { ArrowUp } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -161,8 +163,16 @@ export default function RootLayout({
         <StructuredData data={organizationSchema} />
         <StructuredData data={websiteSchema} />
         <Header />
+
         {children}
         <Footer />
+        {/* Scroll to Top Button */}
+        <button
+          className="size-16 bg-[#4eca5c] rounded-full flex items-center justify-center hover:bg-[#1b6123] transition-colors group fixed bottom-6 left-3 text-white cursor-pointer"
+          aria-label="Scroll to top"
+        >
+          <FaWhatsapp size={34} />
+        </button>
       </body>
     </html>
   );

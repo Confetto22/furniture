@@ -42,7 +42,7 @@ const categories: CategoryCard[] = [
 export default function ArtOfCoziness() {
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 md:mb-16 gap-6">
           <div className="text-center sm:text-left">

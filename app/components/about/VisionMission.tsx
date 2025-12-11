@@ -24,7 +24,7 @@ export default function VisionMission() {
   ];
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
@@ -39,7 +39,7 @@ export default function VisionMission() {
         </div>
 
         {/* Three Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {cards.map((card) => (
             <div
               key={card.title}

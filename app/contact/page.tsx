@@ -128,7 +128,7 @@ export default function Contact() {
       <StructuredData data={localBusinessSchema} />
       <ContactHero />
       <ContactInfo />
-      <div className="container mx-auto px-4 pb-16">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16 pb-16">
         <ContactForm />
       </div>
       <ContactMap />

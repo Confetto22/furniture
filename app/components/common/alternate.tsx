@@ -15,8 +15,8 @@ const Alternate = ({}) => {
   ];
   return (
     <section className="bg-brand-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column */}
           <div className="space-y-8">
             {/* Top Section - Text Content */}

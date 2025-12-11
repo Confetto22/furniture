@@ -14,8 +14,8 @@ const AboutAlternate = () => {
   ];
   return (
     <section className="bg-brand-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 md:gap-12">
           {/* Left Column */}
           <div className="space-y-8">
             {/* Top Section - Text Content */}
@@ -75,7 +75,7 @@ const AboutAlternate = () => {
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765283344/jcl/5b3fb63473475eac9e31f71c093ca224-1_gred6j.jpg"
                 alt="JCL Services office furniture showroom displaying professional workspace solutions in Accra, Ghana"
                 fill
-                className="object-contain"
+                className="object-cover h-full"
               />
             </motion.div>
           </div>
@@ -99,7 +99,7 @@ const AboutAlternate = () => {
                 src="https://res.cloudinary.com/dxsom7jmx/image/upload/v1765282941/jcl/product-jpeg_ehzhia.jpg"
                 alt="Quality office furniture and business solutions from JCL Services Limited, established 1993 in Ghana"
                 fill
-                className="object-contain"
+                className="object-cover h-full"
                 loading="lazy"
               />
             </motion.div>

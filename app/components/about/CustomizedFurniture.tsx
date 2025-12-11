@@ -72,7 +72,7 @@ export default function CustomizedFurniture() {
 
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
@@ -87,9 +87,9 @@ export default function CustomizedFurniture() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Column - Furniture Viewer */}
-          <div className="relative w-full aspect-square md:aspect-auto md:h-auto rounded-lg overflow-hidden border border-brand-white/20 shadow-lg">
+          <div className="relative w-full aspect-square md:aspect-auto md:h-[400px] lg:h-auto rounded-lg overflow-hidden border border-brand-white/20 shadow-lg">
             {/* Background Image */}
             <Image
               src={activeRoomData?.image || roomCategories[0].image}

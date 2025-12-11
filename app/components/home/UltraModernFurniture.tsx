@@ -37,7 +37,7 @@ export default function UltraModernFurniture() {
 
   return (
     <section className="bg-brand-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
@@ -111,7 +111,7 @@ function ProductCard({ product }: { product: Product }) {
             priority
             loading="eager"
             fill
-            className="object-cover group-hover:scale-105 transition-all duration-300 ease-in"
+            className="md:object-cover h-full object-cover object-top md:object-top group-hover:scale-105 transition-all duration-300 ease-in"
           />
         </div>
 

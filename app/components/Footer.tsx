@@ -15,9 +15,6 @@ const instagramImages = [
   "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&q=80",
 ];
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 const quickLinks = [
   {
     ref: "Home",
@@ -66,9 +63,9 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-brand-white">
-      <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className=" mx-auto px-4 py-12 md:py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-8 md:gap-12 mb-12">
           {/* Brand Column */}
           <div>
             {/* Logo */}
@@ -186,18 +183,6 @@ export default function Footer() {
             <p className="text-brand-white/70 text-sm">
               ©JCL Services all rights Reserved
             </p>
-
-            {/* Scroll to Top Button */}
-            <button
-              onClick={scrollToTop}
-              className="w-14 h-14 bg-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold/90 transition-colors relative group"
-              aria-label="Scroll to top"
-            >
-              <ArrowUp className="w-5 h-5 text-brand-dark z-10" />
-              <span className="text-brand-dark text-[9px] font-semibold absolute left-1 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
-                TOP
-              </span>
-            </button>
           </div>
         </div>
       </div>

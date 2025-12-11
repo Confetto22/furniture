@@ -41,8 +41,8 @@ export default function Hero() {
   return (
     <section className="w-full md:bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208580/jcl-furniture/Home-2-banner-img-02_qklaad.webp')] bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1765208098/jcl-furniture/Home-2-banner-img-03_hqjhu4.webp')] bg-cover bg-center overflow-hidden">
       <div className="content bg-brand-dark/70 min-h-screen flex items-center">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-3xl text-white">
+        <div className=" w-full mx-auto px-4 lg:px-10 xl:px-16 py-16">
+          <div className="max-w-3xl text-white ">
             <motion.h3
               initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
               whileInView={{ y: 0, opacity: 1, filter: "blur(0px)" }}

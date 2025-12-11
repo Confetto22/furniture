@@ -64,12 +64,12 @@ export default function FAQ() {
 
   return (
     <section className="bg-brand-dark-light py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 flex-row-reverse gap-8 lg:gap-12">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 flex-row-reverse gap-6">
           {/* Left Panel - FAQ Section */}
           <div className="space-y-6">
             {/* Header */}
-            <div className="mb-8">
+            <div className="mb-8 flex flex-col md:items-start items-center">
               <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
                 PRODUCT RELATED QUERIES
               </div>

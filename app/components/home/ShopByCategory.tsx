@@ -92,7 +92,7 @@ export default function ShopByCategory() {
 
   return (
     <section className="bg-brand-dark py-16 md:py-24">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4 lg:px-10 xl:px-16">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <div className="text-brand-gold text-sm font-semibold uppercase tracking-wider mb-3">
@@ -107,7 +107,7 @@ export default function ShopByCategory() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr]  gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr]  gap-10 md:gap-12">
           {/* Left Column - Categories List */}
           <div className="space-y-3 py-6 ">
             {categories.map((category) => {
@@ -159,7 +159,7 @@ export default function ShopByCategory() {
           </div>
 
           {/* Right Column - Category Preview */}
-          <div className="relative w-full aspect-[9/10] rounded-lg overflow-hidden">
+          <div className="relative w-full aspect-[9/10] md:h-full rounded-lg overflow-hidden">
             {/* Background Image */}
             <Image
               src={activeCategory.image}
@@ -175,11 +175,11 @@ export default function ShopByCategory() {
                 <h3 className="text-xl font-bold text-brand-white">
                   {activeCategory.title}
                 </h3>
-                <div className="bg-brand-gold px-4 py-2 rounded-full inline-block w-fit">
+                {/* <div className="bg-brand-gold px-4 py-2 rounded-full inline-block w-fit">
                   <span className="text-brand-dark text-sm font-semibold">
                     {activeCategory.itemCount} Items
                   </span>
-                </div>
+                </div> */}
               </div>
               <p className="text-brand-white/80 text-sm md:text-base leading-relaxed max-w-2xl">
                 {activeCategory.description}
