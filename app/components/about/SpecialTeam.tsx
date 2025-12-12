@@ -36,6 +36,17 @@ const teamMembers: TeamMember[] = [
       "Has held this Strategic Planning position for a long time with valuable counsel on all range of goods and services.",
   },
   {
+    name: "Janice Omari Frimpong Ofori",
+    title: "Directress",
+    initials: "JO",
+    image:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.57_1_jqocbd.jpg",
+    bio: "Highly accomplished Civil Engineer responsible for Civil Works, Interior Décor, and Furniture Supply.",
+    experience: "18+ years",
+    qualifications:
+      "Civil Engineer leading execution of interior finishing, space planning, décor installations, and tailored furniture solutions for residential, commercial, and institutional projects.",
+  },
+  {
     name: "Anniversary Thomas Tehoda",
     title: "Administrator",
     initials: "AT",
@@ -47,11 +58,11 @@ const teamMembers: TeamMember[] = [
       "Diploma in Business Studies (DBS), Certificate in Project Monitoring & Evaluation from GIMPA. Previously worked on World Bank Projects with Department of Urban Roads.",
   },
   {
-    name: "Janice Omari Frimpong Ofori",
-    title: "Directress",
-    initials: "JO",
+    name: "Emmanuel Obeng Yeboah",
+    title: "Civil Engineer",
+    initials: "EY",
     image:
-      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765272161/jcl/WhatsApp_Image_2025-12-09_at_08.56.57_1_jqocbd.jpg",
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1765532986/jcl/HN7A0901_g582a8.jpg",
     bio: "Highly accomplished Civil Engineer responsible for Civil Works, Interior Décor, and Furniture Supply.",
     experience: "18+ years",
     qualifications:
