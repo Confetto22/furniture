@@ -48,7 +48,10 @@ export default function ContactInfo() {
               <Phone className="w-7 h-7 text-brand-gold" />
             </div>
             <h3 className="text-brand-white font-semibold mb-2">Call Us!</h3>
-            <p className="text-brand-white/70 text-sm">+233(0)302244515</p>
+            <p className="text-brand-white/70 text-sm">
+              +233(0)302244515 <span>/</span>
+            </p>
+            <p className="text-brand-white/70 text-sm">+233(0)558598589</p>
           </Link>
 
           {/* Main Office Location */}

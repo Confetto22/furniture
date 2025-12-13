@@ -93,6 +93,26 @@ export default function Contact() {
       "@type": "Country",
       name: "Ghana",
     },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Office Furniture",
+        description: "Premium office furniture and workspace solutions",
+        category: "Office Furniture",
+      },
+      {
+        "@type": "Offer",
+        name: "Computer Accessories",
+        description: "Computer accessories and office equipment",
+        category: "Computer Accessories",
+      },
+      {
+        "@type": "Offer",
+        name: "Stationery & Printing Materials",
+        description: "Stationery supplies and printing materials",
+        category: "Stationery",
+      },
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Office Furniture & Business Solutions",
